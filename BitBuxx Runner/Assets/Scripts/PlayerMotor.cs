@@ -9,9 +9,15 @@ public class PlayerMotor : MonoBehaviour
     [SerializeField] float jumpForce = 4.0f;
     [SerializeField] float gravity = 12.0f;
     private float verticalVelocity;
-    [SerializeField] float speed = 7.0f;
     [SerializeField] int desiredLane = 1; // 0 = Left; 1 = Middle; 2 = Right 
 
+    //Speed Modifier 
+    private float originalSpeed = 7.0f; 
+    [SerializeField] float speed;
+    [SerializeField] float speedIncreaseLastTick;
+    [SerializeField] float speedIncreaseTime = 2.5f;
+    [SerializeField] float speedIncreaseAmount = 0.1f; 
+   
     private const float LANE_DISTANCE = 3.0f;
     private const float TURN_SPEED = 0.05f;
 
@@ -22,6 +28,7 @@ public class PlayerMotor : MonoBehaviour
 
     private void Start()
     {
+        speed = originalSpeed; 
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>(); 
     }
@@ -31,6 +38,13 @@ public class PlayerMotor : MonoBehaviour
         if (!isGameStarted)
         {
             return; 
+        }
+
+        if(Time.time - speedIncreaseLastTick > speedIncreaseTime)
+        {
+            speedIncreaseLastTick = Time.time;
+            speed += speedIncreaseAmount;
+            GameManager.Instance.UpdateModifier(speed - originalSpeed); 
         }
 
         // Inputs on which lane to be in. 

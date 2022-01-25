@@ -166,10 +166,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3c76f450455580489c24af50ae51d81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 4
+  jumpForce: 7
   gravity: 12
-  speed: 7
   desiredLane: 1
+  speed: 7
+  speedIncreaseLastTick: 0
+  speedIncreaseTime: 2.5
+  speedIncreaseAmount: 0.1
 --- !u!143 &1685628351
 CharacterController:
   m_ObjectHideFlags: 0

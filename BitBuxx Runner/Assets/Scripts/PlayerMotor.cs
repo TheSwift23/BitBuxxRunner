@@ -157,7 +157,8 @@ public class PlayerMotor : MonoBehaviour
     void Crash()
     {
         anim.SetTrigger("Death");
-        isGameStarted = false; 
+        isGameStarted = false;
+        GameManager.Instance.IsDead = true; 
     }
 
     private void OnControllerColliderHit(ControllerColliderHit hit)

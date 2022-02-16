@@ -168,6 +168,7 @@ MonoBehaviour:
   - {fileID: 51726912534841681, guid: 3f1d153f806786f4cb5d2557e9ef8507, type: 3}
   - {fileID: 5207540625757390498, guid: ad8ff2ffe0963954ca764af671304476, type: 3}
   - {fileID: 1235250780529358361, guid: c0671d2d58be299458373f9438830c35, type: 3}
+  - {fileID: 4221459963064197627, guid: a3fb7335ee50a7f4394a60998c7e7738, type: 3}
   availableTransitions:
   - {fileID: 8663477558491487341, guid: f17f582eac2ed62458f5fb968b62a4f1, type: 3}
   segments: []

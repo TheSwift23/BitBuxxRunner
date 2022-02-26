@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e898796f2ca68c64baee754c8a21967f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SHOW_COLLIDER: 0
+  SHOW_COLLIDER: 1
   ramps:
   - {fileID: 6028642228739065680, guid: 026c37b7f87576141b0090a4a4ced610, type: 3}
   - {fileID: 3244278527656544509, guid: 629928b254dbf0a42a7c2ec62f90cb47, type: 3}
@@ -786,14 +786,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1633933814}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.5, z: -3}
+  m_LocalRotation: {x: 0.11756682, y: -0, z: -0, w: 0.993065}
+  m_LocalPosition: {x: 0, y: 4.73, z: -4.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 13.503, y: 0, z: 0}
 --- !u!114 &1633933818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -807,7 +807,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookAt: {fileID: 1685628354}
-  offset: {x: 0, y: 2.5, z: -3}
+  offset: {x: 0, y: 4.73, z: -4.12}
 --- !u!1001 &1685628349
 PrefabInstance:
   m_ObjectHideFlags: 0

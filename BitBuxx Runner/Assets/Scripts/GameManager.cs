@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
             {
                 lastScore = (int)score; 
                 scoreText.text = score.ToString("0");
-                Debug.Log(lastScore); 
+                //Debug.Log(lastScore);     //is it really necessary to log EVERY TIME the score increases? -Mike
             }
         }
     }

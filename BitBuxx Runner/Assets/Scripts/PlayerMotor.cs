@@ -48,12 +48,12 @@ public class PlayerMotor : MonoBehaviour
         }
 
         // Inputs on which lane to be in. 
-        if (MobileInputs.Instance.SwipeLeft)
+        if (MobileInputs.Instance.SwipeLeft || Input.GetKeyDown(KeyCode.A))
         {
             //Move Left
             MoveLane(false); 
         }
-        if (MobileInputs.Instance.SwipeRight)
+        if (MobileInputs.Instance.SwipeRight || Input.GetKeyDown(KeyCode.D))
         {
             //Move Right
             MoveLane(true); 
@@ -80,12 +80,12 @@ public class PlayerMotor : MonoBehaviour
         {
             //verticalVelocity = -0.1f;
             anim.SetBool("Grounded", isGrounded);
-            if (MobileInputs.Instance.SwipeUp)
+            if (MobileInputs.Instance.SwipeUp || Input.GetKeyDown(KeyCode.W))
             {
                 //Jump
                 anim.SetTrigger("Jump"); 
                 verticalVelocity = jumpForce; 
-            }else if (MobileInputs.Instance.SwipeDown)
+            }else if (MobileInputs.Instance.SwipeDown || Input.GetKeyDown(KeyCode.S))
             {
                 //Slide
                 StartSliding();
@@ -97,7 +97,7 @@ public class PlayerMotor : MonoBehaviour
             verticalVelocity -= (gravity * Time.deltaTime);
 
             // Fast Falling 
-            if (MobileInputs.Instance.SwipeDown)
+            if (MobileInputs.Instance.SwipeDown || Input.GetKeyDown(KeyCode.S))
             {
                 verticalVelocity = -jumpForce; 
             }

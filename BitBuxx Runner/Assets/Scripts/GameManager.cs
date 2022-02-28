@@ -1,13 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI; 
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     private const int COIN_SCORE_AMOUNT = 5;
     private int lastScore; 
     public static GameManager Instance { set; get; }
+    
+    //use this to debug the game by reloading the scene
+    public Scene currentScene;
 
     public bool IsDead { set; get; }
     private bool isGameStarted = false;
@@ -19,6 +23,10 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        //current scene is for debugging, might not be used in the final product. -Mike
+        currentScene = SceneManager.GetActiveScene();
+        Debug.Log("Current scene is " + currentScene.name);
+
         Instance = this;
         modifierScore = 1.0f;
         modiferText.text = "x" + modifierScore.ToString("0.0");
@@ -29,6 +37,15 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        //Debug: reset the game scene when we press a button
+        //breaks execution once we do.
+        //will need to be removed once we have a better reload mechanic set up -Mike
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(currentScene.buildIndex);
+            return;
+        }
+
         if(MobileInputs.Instance.Tap && !isGameStarted)
         {
             isGameStarted = true;

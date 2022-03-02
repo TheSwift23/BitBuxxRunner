@@ -15,7 +15,8 @@ public class GameManager : MonoBehaviour
 
     public bool IsDead { set; get; }
     private bool isGameStarted = false;
-    private PlayerMotor motor; 
+    private PlayerMotor motor;
+    private const float MAX_DISTANCE = 1000000;
 
     // UI and UI Fields 
     [SerializeField] Text scoreText, coinText, modiferText;
@@ -37,6 +38,12 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        //this is to fix the possible issue of floating points breaking after a long time
+        if(motor.gameObject.transform.position.z >= MAX_DISTANCE)
+        {
+            MovePlayerAndObjectsToOrigin();
+        }
+
         //Debug: reset the game scene when we press a button
         //breaks execution once we do.
         //will need to be removed once we have a better reload mechanic set up -Mike
@@ -79,5 +86,32 @@ public class GameManager : MonoBehaviour
         modiferText.text = "x" + modifierScore.ToString("0.0");
     }
 
+    private void MovePlayerAndObjectsToOrigin()
+    {
+        try
+        {
+            GameObject levelManager = GameObject.FindGameObjectWithTag("LevelManager");
+            Debug.Log("Found a LevelManager :D");
+
+            //move the child objects back a MAX_DISTANCE of units
+            Transform[] children = levelManager.GetComponentsInChildren<Transform>();
+            foreach (Transform child in children)
+            {
+                MoveObjectBack(child);
+            }
+            MoveObjectBack(motor.gameObject.transform);
+        }
+        catch
+        {
+            Debug.Log("No object with the tag \"LevelManager\" found!");
+            return;
+        }
+    }
+
+    private void MoveObjectBack(Transform obj)
+    {
+        Vector3 newPos = new Vector3(obj.position.x, obj.position.y, obj.position.z - MAX_DISTANCE);
+        obj.position = newPos;
+    }
 
 }

@@ -100,6 +100,8 @@ public class GameManager : MonoBehaviour
                 MoveObjectBack(child);
             }
             MoveObjectBack(motor.gameObject.transform);
+            GameObject cam = GameObject.FindGameObjectWithTag("MainCamera");
+            MoveObjectBack(cam.transform);
         }
         catch
         {

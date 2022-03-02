@@ -6,9 +6,14 @@ public class Coin : MonoBehaviour
 {
     private Animator anim;
 
-    private void Start()
+    private void Awake()
     {
         anim = GetComponent<Animator>(); 
+    }
+
+    private void OnEnable()
+    {
+        anim.SetTrigger("Spawn"); 
     }
 
     private void OnTriggerEnter(Collider other)
@@ -17,7 +22,6 @@ public class Coin : MonoBehaviour
         {
             GameManager.Instance.GetCoin();
             anim.SetTrigger("Collected");
-            Destroy(this.gameObject, 1.5f); 
         }
     }
 }

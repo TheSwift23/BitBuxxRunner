@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     public bool IsDead { set; get; }
     private bool isGameStarted = false;
     private PlayerMotor motor;
-    private const float MAX_DISTANCE = 1000000;
+    private const float MAX_DISTANCE = 10;
 
     // UI and UI Fields 
     [SerializeField] Text scoreText, coinText, modiferText;
@@ -38,12 +38,6 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        //this is to fix the possible issue of floating points breaking after a long time
-        if(motor.gameObject.transform.position.z >= MAX_DISTANCE)
-        {
-            MovePlayerAndObjectsToOrigin();
-        }
-
         //Debug: reset the game scene when we press a button
         //breaks execution once we do.
         //will need to be removed once we have a better reload mechanic set up -Mike
@@ -72,6 +66,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void FixedUpdate()
+    {
+        //this is to fix the possible issue of floating points breaking after a long time
+        if (motor.gameObject.transform.position.z >= MAX_DISTANCE)
+        {
+            Debug.Log(motor.gameObject.transform.position.z);
+            MovePlayerAndObjectsToOrigin();
+        }
+    }
     public void GetCoin()
     {
         coinScore ++;
@@ -94,11 +97,12 @@ public class GameManager : MonoBehaviour
             Debug.Log("Found a LevelManager :D");
 
             //move the child objects back a MAX_DISTANCE of units
-            Transform[] children = levelManager.GetComponentsInChildren<Transform>();
-            foreach (Transform child in children)
+            Segment[] segments = levelManager.GetComponentsInChildren<Segment>();
+            foreach(Segment segment in segments)
             {
-                MoveObjectBack(child);
+                MoveObjectBack(segment.gameObject.transform);
             }
+
             MoveObjectBack(motor.gameObject.transform);
             GameObject cam = GameObject.FindGameObjectWithTag("MainCamera");
             MoveObjectBack(cam.transform);

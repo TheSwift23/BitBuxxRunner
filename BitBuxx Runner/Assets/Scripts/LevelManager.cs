@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -82,7 +82,7 @@ public class LevelManager : MonoBehaviour
         
         if(Random.Range(0f, 1f) < (continiousSegments * 0.25f))
         {
-            //Spaw transition seg 
+            //Spawn transition seg 
             continiousSegments = 0;
             SpawnTransition(); 
         }
@@ -99,16 +99,7 @@ public class LevelManager : MonoBehaviour
 
         Segment s = GetSegment(id, false);
 
-        y1 = s.endY1;
-        y2 = s.endY2;
-        y3 = s.endY3;
-
-        s.transform.SetParent(transform);
-        s.transform.localPosition = Vector3.forward * currentSpawnZ;
-
-        currentSpawnZ += s.length;
-        amountOfactiveSegments++;
-        s.Spawn(); 
+        SpawnSomething(s);
     }
 
     private void SpawnTransition()
@@ -118,6 +109,13 @@ public class LevelManager : MonoBehaviour
 
         Segment s = GetSegment(id, true);
 
+        SpawnSomething(s);
+    }
+
+    //fixes redundant code in the spawn segment and transition functions
+    //i still don't exactly know what it does though ¯\_(ツ)_/¯ -Mike
+    private void SpawnSomething(Segment s)
+    {
         y1 = s.endY1;
         y2 = s.endY2;
         y3 = s.endY3;

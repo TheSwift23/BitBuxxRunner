@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     public bool IsDead { set; get; }
     private bool isGameStarted = false;
     private PlayerMotor motor;
-    private const float MAX_DISTANCE = 10;
+    private const float MAX_DISTANCE = 10000000;
 
     // UI and UI Fields 
     [SerializeField] Text scoreText, coinText, modiferText;
@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
         //this is to fix the possible issue of floating points breaking after a long time
         if (motor.gameObject.transform.position.z >= MAX_DISTANCE)
         {
-            Debug.Log(motor.gameObject.transform.position.z);
+            //Debug.Log(motor.gameObject.transform.position.z);
             MovePlayerAndObjectsToOrigin();
         }
     }
@@ -89,10 +89,13 @@ public class GameManager : MonoBehaviour
         modiferText.text = "x" + modifierScore.ToString("0.0");
     }
 
+    //gets the segments in the level manager, the player, and the camera
+    //and moves them back max distance units
     private void MovePlayerAndObjectsToOrigin()
     {
         try
         {
+            //find the level manager (MAKE SURE THE MANAGER IS TAGGED!!!)
             GameObject levelManager = GameObject.FindGameObjectWithTag("LevelManager");
             Debug.Log("Found a LevelManager :D");
 
@@ -103,17 +106,21 @@ public class GameManager : MonoBehaviour
                 MoveObjectBack(segment.gameObject.transform);
             }
 
+            //do the same thing to the player
             MoveObjectBack(motor.gameObject.transform);
-            GameObject cam = GameObject.FindGameObjectWithTag("MainCamera");
+            //and do the same for the camera
+            GameObject cam = GameObject.FindGameObjectWithTag("MainCamera");    //we don't need to do the try/catch since the cam is tagged by default
             MoveObjectBack(cam.transform);
         }
         catch
         {
+            //this should only happen if some forgets to tag the manager
             Debug.Log("No object with the tag \"LevelManager\" found!");
             return;
         }
     }
 
+    //moves the object 'obj' back by the max distance of units
     private void MoveObjectBack(Transform obj)
     {
         Vector3 newPos = new Vector3(obj.position.x, obj.position.y, obj.position.z - MAX_DISTANCE);

@@ -16,7 +16,7 @@ public class LevelManager : MonoBehaviour
     private Transform cameraContainer;
     private int amountOfactiveSegments;
     private int continiousSegments;
-    private int currentSpawnZ;
+    public int currentSpawnZ;
     private int currentLevel;
     private int y1, y2, y3; 
 

@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     public bool IsDead { set; get; }
     private bool isGameStarted = false;
     private PlayerMotor motor;
-    private const float MAX_DISTANCE = 10000000;
+    private const float MAX_DISTANCE = 1;//0000000;
 
     // UI and UI Fields 
     [SerializeField] Text scoreText, coinText, modiferText;
@@ -111,6 +111,8 @@ public class GameManager : MonoBehaviour
             //and do the same for the camera
             GameObject cam = GameObject.FindGameObjectWithTag("MainCamera");    //we don't need to do the try/catch since the cam is tagged by default
             MoveObjectBack(cam.transform);
+            LevelManager lm = levelManager.GetComponent<LevelManager>();
+            lm.currentSpawnZ -= Mathf.FloorToInt(MAX_DISTANCE);
         }
         catch
         {

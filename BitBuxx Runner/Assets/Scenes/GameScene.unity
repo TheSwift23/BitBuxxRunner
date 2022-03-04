@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SHOW_COLLIDER: 0
+  currentSpawnZ: 0
   ramps:
   - {fileID: 6028642228739065680, guid: 026c37b7f87576141b0090a4a4ced610, type: 3}
   - {fileID: 3244278527656544509, guid: 629928b254dbf0a42a7c2ec62f90cb47, type: 3}

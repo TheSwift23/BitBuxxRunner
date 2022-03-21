@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+
+    public Text deathscoreText, deathcoinText; 
     private const int COIN_SCORE_AMOUNT = 5;
     private int lastScore; 
     public static GameManager Instance { set; get; }
@@ -20,7 +22,10 @@ public class GameManager : MonoBehaviour
 
     // UI and UI Fields 
     [SerializeField] Text scoreText, coinText, modiferText;
-    private float score, coinScore, modifierScore; 
+    private float score, coinScore, modifierScore;
+
+    //Death Menu 
+    public Animator deathMenuAnim; 
 
     private void Awake()
     {
@@ -50,7 +55,8 @@ public class GameManager : MonoBehaviour
         if(MobileInputs.Instance.Tap && !isGameStarted)
         {
             isGameStarted = true;
-            motor.StartGame(); 
+            motor.StartGame();
+            FindObjectOfType<OutsideSpawner>().IsScrolling = true; 
         }
 
         if (isGameStarted && !IsDead)
@@ -87,6 +93,22 @@ public class GameManager : MonoBehaviour
     {
         modifierScore = 1.0f + modifierAmount;
         modiferText.text = "x" + modifierScore.ToString("0.0");
+    }
+
+    //Restarts Game. 
+    public void OnPlayButton()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene"); 
+    }
+
+    //Death menu pops up. 
+    public void OnDeath()
+    {
+        IsDead = true;
+        FindObjectOfType<OutsideSpawner>().IsScrolling = false; 
+        deathscoreText.text = score.ToString("0");
+        deathcoinText.text = coinScore.ToString("0"); 
+        deathMenuAnim.SetTrigger("Dead"); 
     }
 
     //gets the segments in the level manager, the player, and the camera

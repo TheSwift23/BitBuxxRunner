@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     public bool IsDead { set; get; }
     private bool isGameStarted = false;
     private PlayerMotor motor;
-    private const float MAX_DISTANCE = 1;//0000000;
+    private const float MAX_DISTANCE = 10000000;
 
     // UI and UI Fields 
     [SerializeField] Text scoreText, coinText, modiferText;

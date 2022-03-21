@@ -18,9 +18,10 @@ public class OutsideSpawner : MonoBehaviour
     private void Start()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-        IsScrolling = true; 
+        //IsScrolling = true; //used for testing
     }
 
+    //Moves the buildings infront of the player.
     private void Update()
     {
         if (!IsScrolling)

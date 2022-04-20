@@ -21,7 +21,8 @@ public class GameManager : MonoBehaviour
     private const float MAX_DISTANCE = 10000000;
 
     // UI and UI Fields 
-    [SerializeField] Text scoreText, coinText, modiferText;
+    public Animator gameCanvas, menuAnim, moneyAnim; 
+    [SerializeField] Text scoreText, coinText, modiferText, highScoreText;
     private float score, coinScore, modifierScore;
 
     //Death Menu 
@@ -29,6 +30,8 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        highScoreText.text = PlayerPrefs.GetInt("Highscore").ToString(); 
+
         //current scene is for debugging, might not be used in the final product. -Mike
         currentScene = SceneManager.GetActiveScene();
         Debug.Log("Current scene is " + currentScene.name);
@@ -56,7 +59,10 @@ public class GameManager : MonoBehaviour
         {
             isGameStarted = true;
             motor.StartGame();
-            FindObjectOfType<OutsideSpawner>().IsScrolling = true; 
+            FindObjectOfType<OutsideSpawner>().IsScrolling = true;
+            FindObjectOfType<CameraMotor>().IsMoving = true;
+            gameCanvas.SetTrigger("Show");
+            menuAnim.SetTrigger("Hide"); 
         }
 
         if (isGameStarted && !IsDead)
@@ -83,6 +89,7 @@ public class GameManager : MonoBehaviour
     }
     public void GetCoin()
     {
+        moneyAnim.SetTrigger("Collect");
         coinScore ++;
         coinText.text = coinScore.ToString("0");
         score += COIN_SCORE_AMOUNT; 
@@ -108,7 +115,17 @@ public class GameManager : MonoBehaviour
         FindObjectOfType<OutsideSpawner>().IsScrolling = false; 
         deathscoreText.text = score.ToString("0");
         deathcoinText.text = coinScore.ToString("0"); 
-        deathMenuAnim.SetTrigger("Dead"); 
+        deathMenuAnim.SetTrigger("Dead");
+        gameCanvas.SetTrigger("Hide");
+
+        //Check for highscore 
+        if(score > PlayerPrefs.GetInt("Highscore"))
+        {
+            float s = score;
+            if (s % 1 == 0)
+                s += 1; 
+            PlayerPrefs.SetInt("Highscore", (int)s); 
+        }
     }
 
     //gets the segments in the level manager, the player, and the camera

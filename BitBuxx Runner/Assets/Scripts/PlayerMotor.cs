@@ -16,7 +16,7 @@ public class PlayerMotor : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] float speedIncreaseLastTick;
     [SerializeField] float speedIncreaseTime = 2.5f;
-    [SerializeField] float speedIncreaseAmount = 0.1f; 
+    [SerializeField] float speedIncreaseAmount = 0.2f; 
    
     private const float LANE_DISTANCE = 3.0f;
     private const float TURN_SPEED = 0.05f;

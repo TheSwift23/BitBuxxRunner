@@ -26,7 +26,12 @@ public class GameManager : MonoBehaviour
     private float score, coinScore, modifierScore;
 
     //Death Menu 
-    public Animator deathMenuAnim; 
+    public Animator deathMenuAnim;
+
+    private void Start()
+    {
+        gameCanvas.SetTrigger("Hide");
+    }
 
     private void Awake()
     {
@@ -73,7 +78,6 @@ public class GameManager : MonoBehaviour
             {
                 lastScore = (int)score; 
                 scoreText.text = score.ToString("0");
-                //Debug.Log(lastScore);     //is it really necessary to log EVERY TIME the score increases? -Mike
             }
         }
     }

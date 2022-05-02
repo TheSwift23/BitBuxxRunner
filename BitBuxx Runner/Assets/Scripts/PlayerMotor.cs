@@ -14,6 +14,7 @@ public class PlayerMotor : MonoBehaviour
     //Speed Modifier 
     private float originalSpeed = 7.0f; 
     [SerializeField] float speed;
+    [SerializeField] float MAX_SPEED;
     [SerializeField] float speedIncreaseLastTick;
     [SerializeField] float speedIncreaseTime = 2.5f;
     [SerializeField] float speedIncreaseAmount = 0.2f; 
@@ -40,10 +41,14 @@ public class PlayerMotor : MonoBehaviour
             return; 
         }
 
-        if(Time.time - speedIncreaseLastTick > speedIncreaseTime)
+        if(Time.time - speedIncreaseLastTick > speedIncreaseTime && speed < MAX_SPEED)
         {
             speedIncreaseLastTick = Time.time;
             speed += speedIncreaseAmount;
+            if (speed > MAX_SPEED)
+            {
+                speed = MAX_SPEED;
+            }
             GameManager.Instance.UpdateModifier(speed - originalSpeed); 
         }
 

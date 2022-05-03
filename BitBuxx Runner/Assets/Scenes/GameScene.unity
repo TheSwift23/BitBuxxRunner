@@ -3169,6 +3169,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1685628351, guid: 54dcfae1b328ea243862dd52ae715b47, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1685628351, guid: 54dcfae1b328ea243862dd52ae715b47, type: 3}
       propertyPath: m_SlopeLimit
       value: 50
       objectReference: {fileID: 0}
@@ -3438,6 +3442,10 @@ MonoBehaviour:
   coinText: {fileID: 970643456}
   modiferText: {fileID: 1974467618}
   highScoreText: {fileID: 142178060}
+  score: 0
+  coinScore: 0
+  modifierScore: 0
+  modifierScoreCap: 0
   deathMenuAnim: {fileID: 1862948285}
 --- !u!4 &1732002902
 Transform:

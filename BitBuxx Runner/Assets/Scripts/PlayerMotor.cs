@@ -83,7 +83,7 @@ public class PlayerMotor : MonoBehaviour
         // Calculate Y 
         if (IsGrounded()) // if grounded 
         {
-            //verticalVelocity = -0.1f;
+            verticalVelocity = -0.1f;
             anim.SetBool("Grounded", isGrounded);
             if (MobileInputs.Instance.SwipeUp || Input.GetKeyDown(KeyCode.W))
             {

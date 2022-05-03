@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     // UI and UI Fields 
     public Animator gameCanvas, menuAnim, moneyAnim; 
     [SerializeField] Text scoreText, coinText, modiferText, highScoreText;
-    private float score, coinScore, modifierScore;
+    [SerializeField] private float score, coinScore, modifierScore, modifierScoreCap;
 
     //Death Menu 
     public Animator deathMenuAnim;
@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
 
         Instance = this;
         modifierScore = 1.0f;
+        modifierScoreCap = 5.0f; 
         modiferText.text = "x" + modifierScore.ToString("0.0");
         scoreText.text = scoreText.text = score.ToString("0");
         coinText.text = coinScore.ToString("0"); 
@@ -102,8 +103,11 @@ public class GameManager : MonoBehaviour
 
     public void UpdateModifier(float modifierAmount)
     {
-        modifierScore = 1.0f + modifierAmount;
-        modiferText.text = "x" + modifierScore.ToString("0.0");
+        if(modifierScore < modifierScoreCap)
+        {
+            modifierScore = 1.0f + modifierAmount;
+            modiferText.text = "x" + modifierScore.ToString("0.0");
+        }
     }
 
     //Restarts Game. 

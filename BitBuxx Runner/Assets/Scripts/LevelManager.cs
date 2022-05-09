@@ -25,6 +25,7 @@ public class LevelManager : MonoBehaviour
     public List<Piece> longblocks = new List<Piece>();
     public List<Piece> jumps = new List<Piece>();
     public List<Piece> slides = new List<Piece>();
+    public List<Piece> wallRun = new List<Piece>(); 
     [HideInInspector]
     public List<Piece> pieces = new List<Piece>(); // All the pieces in the pool. 
 
@@ -112,8 +113,6 @@ public class LevelManager : MonoBehaviour
         SpawnSomething(s);
     }
 
-    //fixes redundant code in the spawn segment and transition functions
-    //i still don't exactly know what it does though ¯\_(ツ)_/¯ -Mike
     private void SpawnSomething(Segment s)
     {
         y1 = s.endY1;
@@ -167,6 +166,8 @@ public class LevelManager : MonoBehaviour
                 go = jumps[visualIndex].gameObject;
             else if (pt == PieceType.slide)
                 go = slides[visualIndex].gameObject;
+            else if (pt == PieceType.wallRun)
+                go = wallRun[visualIndex].gameObject; 
 
             go = Instantiate(go);
             p = go.GetComponent<Piece>();

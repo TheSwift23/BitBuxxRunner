@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.5252057, g: 0.6720277, b: 0.7359402, a: 1}
+  m_IndirectSpecularColor: {r: 0.5261997, g: 0.6734772, b: 0.7364945, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -164,6 +164,8 @@ MonoBehaviour:
   - {fileID: 4593660616872749711, guid: b22d855a6eb0d324da0f9bbd5a2bd3f1, type: 3}
   slides:
   - {fileID: 5615260024153904946, guid: ad6e56276c2545740b81126694cb8d59, type: 3}
+  wallRun:
+  - {fileID: 4396241191514619637, guid: b26e9686c90c61848ab365314fef5ef8, type: 3}
   pieces: []
   availableSements:
   - {fileID: 51726912534841681, guid: 3f1d153f806786f4cb5d2557e9ef8507, type: 3}
@@ -172,6 +174,7 @@ MonoBehaviour:
   - {fileID: 4221459963064197627, guid: a3fb7335ee50a7f4394a60998c7e7738, type: 3}
   - {fileID: 7017786190844303524, guid: 8b11b08687f6cb9429106a72fd053998, type: 3}
   - {fileID: 1306094940563248754, guid: 57418c03bc23d654ab00e5fb81e0d89c, type: 3}
+  - {fileID: 4534295039930084113, guid: 2601b037dc73ad246b5d5136bc26d4ed, type: 3}
   availableTransitions:
   - {fileID: 8663477558491487341, guid: f17f582eac2ed62458f5fb968b62a4f1, type: 3}
   segments: []
@@ -1998,103 +2001,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 51.325, y: -40.502, z: 106.395}
---- !u!1 &1156051530
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1156051534}
-  - component: {fileID: 1156051533}
-  - component: {fileID: 1156051532}
-  - component: {fileID: 1156051531}
-  m_Layer: 7
-  m_Name: Cube
-  m_TagString: WallRun
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!65 &1156051531
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1156051530}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1156051532
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1156051530}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1156051533
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1156051530}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1156051534
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1156051530}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.1345, z: 13}
-  m_LocalScale: {x: 9.915673, y: 7.269, z: 10.3859}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1206155335
 GameObject:
   m_ObjectHideFlags: 0
@@ -3291,7 +3197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1685628351, guid: 54dcfae1b328ea243862dd52ae715b47, type: 3}
       propertyPath: m_Center.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1685628351, guid: 54dcfae1b328ea243862dd52ae715b47, type: 3}
       propertyPath: m_SlopeLimit

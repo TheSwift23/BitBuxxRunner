@@ -7,24 +7,28 @@ public class PlayerMotor : MonoBehaviour
     [Header("Movement")]
     private CharacterController controller; 
     [SerializeField] float jumpForce = 4.0f;
+    [SerializeField] float wallRunForce = 2.5f; 
     [SerializeField] float gravity = 12.0f;
     private float verticalVelocity;
     private int desiredLane = 1; // 0 = Left; 1 = Middle; 2 = Right
 
-    //Speed Modifier 
+
+    [Header("Speed Modifiers")]
     private float originalSpeed = 7.0f; 
     [SerializeField] float speed;
     [SerializeField] float MAX_SPEED;
     [SerializeField] float speedIncreaseLastTick;
     [SerializeField] float speedIncreaseTime = 2.5f;
-    [SerializeField] float speedIncreaseAmount = 0.2f; 
+    [SerializeField] float speedIncreaseAmount = 0.2f;
+    private Transform playerOrigin; 
    
     private const float LANE_DISTANCE = 3.0f;
     private const float TURN_SPEED = 0.05f;
-
+    
     private bool isGameStarted = false;
     private bool wallRunningLeft;
-    private bool wallRunningRight; 
+    private bool wallRunningRight;
+    private bool wallRunning; 
     
     //Animation
     private Animator anim; 
@@ -81,7 +85,6 @@ public class PlayerMotor : MonoBehaviour
         {
             //Begin wallrunning to the left 
             StartWalllRunning();
-            Invoke("StopWallRunning", 3.0f);
         }
 
         if (desiredLane == 2 && wallRunningRight == true)
@@ -100,7 +103,7 @@ public class PlayerMotor : MonoBehaviour
         {
             //verticalVelocity = -0.1f;
             anim.SetBool("Grounded", isGrounded);
-            if (MobileInputs.Instance.SwipeUp || Input.GetKeyDown(KeyCode.W))
+            if (MobileInputs.Instance.SwipeUp || Input.GetKeyDown(KeyCode.W) && wallRunning == false)
             {
                 //Jump
                 anim.SetTrigger("Jump"); 
@@ -140,12 +143,16 @@ public class PlayerMotor : MonoBehaviour
     
     void StartWalllRunning()
     {
-        anim.SetBool("WallRun", true); 
+        anim.SetBool("WallRun", true);
+        wallRunning = true; 
+        verticalVelocity = wallRunForce; 
     }
 
     void StopWallRunning()
     {
-        anim.SetBool("WallRun", false); 
+        anim.SetBool("WallRun", false);
+        wallRunning = false; // Wall running finally works!!! LETS GOOOOOOOO!!!!!!
+        verticalVelocity = -jumpForce; // Player needs to hit the ground faster when exiting wall run. 
     }
     
     void StartSliding()
@@ -201,7 +208,8 @@ public class PlayerMotor : MonoBehaviour
     {
         if(other.tag == "WallRun")
         {
-            wallRunningLeft = false; 
+            wallRunningLeft = false;
+            StopWallRunning(); // Figure out how to get player to lift in the air.
         }
     }
 

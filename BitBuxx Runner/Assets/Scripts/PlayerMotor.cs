@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class PlayerMotor : MonoBehaviour
 {
-    // Movement
+    [Header("Movement")]
     private CharacterController controller; 
     [SerializeField] float jumpForce = 4.0f;
     [SerializeField] float gravity = 12.0f;
     private float verticalVelocity;
-    [SerializeField] int desiredLane = 1; // 0 = Left; 1 = Middle; 2 = Right 
+    private int desiredLane = 1; // 0 = Left; 1 = Middle; 2 = Right
 
     //Speed Modifier 
     private float originalSpeed = 7.0f; 
@@ -22,8 +22,10 @@ public class PlayerMotor : MonoBehaviour
     private const float LANE_DISTANCE = 3.0f;
     private const float TURN_SPEED = 0.05f;
 
-    private bool isGameStarted = false; 
-
+    private bool isGameStarted = false;
+    private bool wallRunningLeft;
+    private bool wallRunningRight; 
+    
     //Animation
     private Animator anim; 
 
@@ -73,7 +75,20 @@ public class PlayerMotor : MonoBehaviour
         {
             targetPosition += Vector3.right * LANE_DISTANCE;
         }
+        
+        //Caluclate WallRunning 
+        if (desiredLane == 0 && wallRunningLeft == true)
+        {
+            //Begin wallrunning to the left 
+            StartWalllRunning();
+            Invoke("StopWallRunning", 3.0f);
+        }
 
+        if (desiredLane == 2 && wallRunningRight == true)
+        {
+            //Begin wallrunning to the right 
+        }
+        
         //Calculate move delta 
         Vector3 moveVector = Vector3.zero;
         moveVector.x = (targetPosition - transform.position).normalized.x * speed;
@@ -83,7 +98,7 @@ public class PlayerMotor : MonoBehaviour
         // Calculate Y 
         if (IsGrounded()) // if grounded 
         {
-            verticalVelocity = -0.1f;
+            //verticalVelocity = -0.1f;
             anim.SetBool("Grounded", isGrounded);
             if (MobileInputs.Instance.SwipeUp || Input.GetKeyDown(KeyCode.W))
             {
@@ -108,8 +123,6 @@ public class PlayerMotor : MonoBehaviour
             }
         }
 
-
-
         moveVector.y = verticalVelocity;
         moveVector.z = speed;
 
@@ -124,7 +137,17 @@ public class PlayerMotor : MonoBehaviour
             transform.forward = Vector3.Lerp(transform.forward, dir, TURN_SPEED); 
         }
     }
+    
+    void StartWalllRunning()
+    {
+        anim.SetBool("WallRun", true); 
+    }
 
+    void StopWallRunning()
+    {
+        anim.SetBool("WallRun", false); 
+    }
+    
     void StartSliding()
     {
         anim.SetBool("Sliding", true);
@@ -164,6 +187,22 @@ public class PlayerMotor : MonoBehaviour
         anim.SetTrigger("Death");
         isGameStarted = false;
         GameManager.Instance.OnDeath(); 
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "WallRun")
+        {
+            wallRunningLeft = true; 
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.tag == "WallRun")
+        {
+            wallRunningLeft = false; 
+        }
     }
 
     private void OnControllerColliderHit(ControllerColliderHit hit)

@@ -64,11 +64,25 @@ public class PlayerMotor : MonoBehaviour
             //Move Left
             MoveLane(false); 
         }
+
+        if (MobileInputs.Instance.SwipeLeft && wallRunningLeft == true || Input.GetKeyDown(KeyCode.A) && wallRunningLeft == true)
+        {
+            wallRunning = true; 
+        }
+
         if (MobileInputs.Instance.SwipeRight || Input.GetKeyDown(KeyCode.D))
         {
             //Move Right
             MoveLane(true); 
         }
+
+        if(wallRunning == true)
+        {
+            StartWalllRunning();
+        }
+
+        Debug.Log("WL " + wallRunningLeft);
+        Debug.Log("WR " + wallRunning); 
 
         //Calcuate where to be in the future
         Vector3 targetPosition = transform.position.z * Vector3.forward;
@@ -81,10 +95,11 @@ public class PlayerMotor : MonoBehaviour
         }
         
         //Caluclate WallRunning 
-        if (desiredLane == 0 && wallRunningLeft == true)
+        if (desiredLane == 0 && wallRunningLeft == true) // Might delete later. 
         {
+            //Changed wall running to doing one more swipe. 
             //Begin wallrunning to the left 
-            StartWalllRunning();
+            //StartWalllRunning();
         }
 
         if (desiredLane == 2 && wallRunningRight == true)
@@ -144,8 +159,8 @@ public class PlayerMotor : MonoBehaviour
     void StartWalllRunning()
     {
         anim.SetBool("WallRun", true);
-        wallRunning = true; 
         verticalVelocity = wallRunForce; 
+       // wallRunning = true; // Might not delete see if when playtesting people find a bug with this being removed. 
     }
 
     void StopWallRunning()

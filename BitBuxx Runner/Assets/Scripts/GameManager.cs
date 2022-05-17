@@ -6,10 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Audio")] //Adding music in the game made everything so much better :). 
+    [SerializeField] AudioSource titleMusic;
+    [SerializeField] AudioSource mainMusic; 
 
     public Text deathscoreText, deathcoinText; 
     private const int COIN_SCORE_AMOUNT = 5;
-    private int lastScore; 
+    private int lastScore;
+    private int totalCoinAmount; 
     public static GameManager Instance { set; get; }
     
     //use this to debug the game by reloading the scene
@@ -22,8 +26,8 @@ public class GameManager : MonoBehaviour
 
     // UI and UI Fields 
     public Animator gameCanvas, menuAnim, moneyAnim; 
-    [SerializeField] Text scoreText, coinText, modiferText, highScoreText;
-    [SerializeField] private float score, coinScore, modifierScore, modifierScoreCap;
+    [SerializeField] Text scoreText, coinText, modiferText, highScoreText, coinScoreText;
+    [SerializeField] float score, coinScore, modifierScore, modifierScoreCap, totalCoinScore;
 
     //Death Menu 
     public Animator deathMenuAnim;
@@ -31,11 +35,15 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         gameCanvas.SetTrigger("Hide");
+        mainMusic.Stop(); 
+        titleMusic.Play(); 
     }
 
     private void Awake()
     {
-        highScoreText.text = PlayerPrefs.GetInt("Highscore").ToString(); 
+        highScoreText.text = PlayerPrefs.GetInt("Highscore").ToString();
+        coinScoreText.text = PlayerPrefs.GetInt("CoinAmount", 0).ToString();
+        totalCoinScore = PlayerPrefs.GetInt("CoinAmount"); 
 
         //current scene is for debugging, might not be used in the final product. -Mike
         currentScene = SceneManager.GetActiveScene();
@@ -52,18 +60,13 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        //Debug: reset the game scene when we press a button
-        //breaks execution once we do.
-        //will need to be removed once we have a better reload mechanic set up -Mike
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            SceneManager.LoadScene(currentScene.buildIndex);
-            return;
-        }
+        //Reset mechanic no longer needed so I deleted it. 
 
         if(MobileInputs.Instance.Tap && !isGameStarted)
         {
             isGameStarted = true;
+            titleMusic.Stop();
+            mainMusic.Play(); 
             motor.StartGame();
             FindObjectOfType<OutsideSpawner>().IsScrolling = true;
             FindObjectOfType<CameraMotor>().IsMoving = true;
@@ -96,6 +99,7 @@ public class GameManager : MonoBehaviour
     {
         moneyAnim.SetTrigger("Collect");
         coinScore ++;
+        totalCoinScore ++; 
         coinText.text = coinScore.ToString("0");
         score += COIN_SCORE_AMOUNT; 
         scoreText.text = scoreText.text = score.ToString("0"); 
@@ -125,6 +129,7 @@ public class GameManager : MonoBehaviour
         deathcoinText.text = coinScore.ToString("0"); 
         deathMenuAnim.SetTrigger("Dead");
         gameCanvas.SetTrigger("Hide");
+        PlayerPrefs.SetInt("CoinAmount", (int)totalCoinScore); 
 
         //Check for highscore 
         if(score > PlayerPrefs.GetInt("Highscore"))

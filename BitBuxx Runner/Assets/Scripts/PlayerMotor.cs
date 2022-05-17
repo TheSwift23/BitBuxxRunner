@@ -20,8 +20,13 @@ public class PlayerMotor : MonoBehaviour
     [SerializeField] float speedIncreaseLastTick;
     [SerializeField] float speedIncreaseTime = 2.5f;
     [SerializeField] float speedIncreaseAmount = 0.2f;
-    private Transform playerOrigin; 
-   
+    private Transform playerOrigin;
+
+    [Header("Audio")] // WOW Im back here again SMH
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip moneyPickUpSfx;
+    private float volume = 0.5f;
+
     private const float LANE_DISTANCE = 3.0f;
     private const float TURN_SPEED = 0.05f;
     
@@ -216,6 +221,11 @@ public class PlayerMotor : MonoBehaviour
         if(other.tag == "WallRun")
         {
             wallRunningLeft = true; 
+        }
+
+        if(other.tag == "Coin")
+        {
+            audioSource.PlayOneShot(moneyPickUpSfx, volume);
         }
     }
 

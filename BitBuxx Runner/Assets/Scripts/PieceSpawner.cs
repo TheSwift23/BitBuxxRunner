@@ -24,6 +24,9 @@ public class PieceSpawner : MonoBehaviour
             case PieceType.ramp:
                 amtObj = LevelManager.Instance.ramps.Count;
                 break;
+            case PieceType.wallRun:
+                amtObj = LevelManager.Instance.wallRun.Count;
+                break; 
         }
         currentPiece = LevelManager.Instance.GetPiece(type, Random.Range(0,amtObj)); 
         currentPiece.gameObject.SetActive(true);

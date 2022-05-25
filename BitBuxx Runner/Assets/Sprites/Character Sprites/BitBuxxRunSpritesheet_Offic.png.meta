@@ -1,0 +1,376 @@
+fileFormatVersion: 2
+guid: 136dc3539c7afd94bbc1137e300931bd
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BitBuxxRunSpritesheet_Offic_0
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 0
+        width: 186
+        height: 450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ef0f2e4a86b6444c8665d6c69b757ca
+      internalID: -430001382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BitBuxxRunSpritesheet_Offic_11
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 0
+        width: 186
+        height: 450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18651019deae6ff46937dff071a7826e
+      internalID: 449842025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BitBuxxRunSpritesheet_Offic_19
+      rect:
+        serializedVersion: 2
+        x: 1142
+        y: 0
+        width: 198
+        height: 450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88a2dc5ab12f70544b9a7d083ece21a6
+      internalID: -1678618524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BitBuxxRunSpritesheet_Offic_21
+      rect:
+        serializedVersion: 2
+        x: 1658
+        y: 0
+        width: 189
+        height: 450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eefee07347e28064084d467ca170eea8
+      internalID: -1364266712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BitBuxxRunSpritesheet_Offic_25
+      rect:
+        serializedVersion: 2
+        x: 2663
+        y: 0
+        width: 189
+        height: 450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43a70e2381644924492e3eb32433ebfb
+      internalID: -373086854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BitBuxxRunSpritesheet_Offic_26
+      rect:
+        serializedVersion: 2
+        x: 3150
+        y: 0
+        width: 183
+        height: 450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee88ea250c7254f41b25668f650f2e09
+      internalID: -1072741515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BitBuxxRunSpritesheet_Offic_28
+      rect:
+        serializedVersion: 2
+        x: 2141
+        y: 0
+        width: 173
+        height: 450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ff721c2f35e57b4c816ba1d36dd517b
+      internalID: -438124507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      BitBuxxRunSpritesheet_Offic_46: 1784838179
+      BitBuxxRunSpritesheet_Offic_16: -391056573
+      BitBuxxRunSpritesheet_Offic_58: 1356608122
+      BitBuxxRunSpritesheet_Offic_41: -1546210113
+      BitBuxxRunSpritesheet_Offic_28: -438124507
+      BitBuxxRunSpritesheet_Offic_31: -1090226260
+      BitBuxxRunSpritesheet_Offic_57: 1402292526
+      BitBuxxRunSpritesheet_Offic_1: 1583613892
+      BitBuxxRunSpritesheet_Offic_62: 317036360
+      BitBuxxRunSpritesheet_Offic_6: -1574034019
+      BitBuxxRunSpritesheet_Offic_43: -1488352207
+      BitBuxxRunSpritesheet_Offic_26: -1072741515
+      BitBuxxRunSpritesheet_Offic_63: 21209461
+      BitBuxxRunSpritesheet_Offic_48: 1524351699
+      BitBuxxRunSpritesheet_Offic_21: -1364266712
+      BitBuxxRunSpritesheet_Offic_50: 323351917
+      BitBuxxRunSpritesheet_Offic_47: 334463077
+      BitBuxxRunSpritesheet_Offic_53: -1335414135
+      BitBuxxRunSpritesheet_Offic_65: -1072049094
+      BitBuxxRunSpritesheet_Offic_17: 2022250529
+      BitBuxxRunSpritesheet_Offic_2: -1851110746
+      BitBuxxRunSpritesheet_Offic_36: -1252562209
+      BitBuxxRunSpritesheet_Offic_55: -492519123
+      BitBuxxRunSpritesheet_Offic_45: 247679181
+      BitBuxxRunSpritesheet_Offic_35: 423068660
+      BitBuxxRunSpritesheet_Offic_30: 1118453725
+      BitBuxxRunSpritesheet_Offic_29: -1804745887
+      BitBuxxRunSpritesheet_Offic_52: 1903685400
+      BitBuxxRunSpritesheet_Offic_27: 1446436217
+      BitBuxxRunSpritesheet_Offic_13: -1639112298
+      BitBuxxRunSpritesheet_Offic_20: 351357964
+      BitBuxxRunSpritesheet_Offic_15: 404074952
+      BitBuxxRunSpritesheet_Offic_19: -1678618524
+      BitBuxxRunSpritesheet_Offic_33: 1589522736
+      BitBuxxRunSpritesheet_Offic_9: -746569718
+      BitBuxxRunSpritesheet_Offic_3: 831304728
+      BitBuxxRunSpritesheet_Offic_11: 449842025
+      BitBuxxRunSpritesheet_Offic_42: -590584986
+      BitBuxxRunSpritesheet_Offic_14: -66618351
+      BitBuxxRunSpritesheet_Offic_64: 1334997899
+      BitBuxxRunSpritesheet_Offic_24: -439656730
+      BitBuxxRunSpritesheet_Offic_25: -373086854
+      BitBuxxRunSpritesheet_Offic_38: -1047789718
+      BitBuxxRunSpritesheet_Offic_44: -421192747
+      BitBuxxRunSpritesheet_Offic_18: -1027706161
+      BitBuxxRunSpritesheet_Offic_49: 180156311
+      BitBuxxRunSpritesheet_Offic_34: -323666500
+      BitBuxxRunSpritesheet_Offic_60: 1713057483
+      BitBuxxRunSpritesheet_Offic_68: 610648317
+      BitBuxxRunSpritesheet_Offic_54: -1273529315
+      BitBuxxRunSpritesheet_Offic_10: 722546059
+      BitBuxxRunSpritesheet_Offic_23: -2061192690
+      BitBuxxRunSpritesheet_Offic_4: -1008198844
+      BitBuxxRunSpritesheet_Offic_8: 342548254
+      BitBuxxRunSpritesheet_Offic_12: -405883220
+      BitBuxxRunSpritesheet_Offic_67: 1770096667
+      BitBuxxRunSpritesheet_Offic_70: -736957075
+      BitBuxxRunSpritesheet_Offic_5: -692445254
+      BitBuxxRunSpritesheet_Offic_32: 118466458
+      BitBuxxRunSpritesheet_Offic_22: 1621681540
+      BitBuxxRunSpritesheet_Offic_56: 1624907634
+      BitBuxxRunSpritesheet_Offic_39: -1391351820
+      BitBuxxRunSpritesheet_Offic_37: -396012303
+      BitBuxxRunSpritesheet_Offic_59: -1642105910
+      BitBuxxRunSpritesheet_Offic_0: -430001382
+      BitBuxxRunSpritesheet_Offic_51: -538056091
+      BitBuxxRunSpritesheet_Offic_66: 1749631995
+      BitBuxxRunSpritesheet_Offic_7: 1490748469
+      BitBuxxRunSpritesheet_Offic_61: 1961568449
+      BitBuxxRunSpritesheet_Offic_40: 688989244
+      BitBuxxRunSpritesheet_Offic_69: 192998224
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

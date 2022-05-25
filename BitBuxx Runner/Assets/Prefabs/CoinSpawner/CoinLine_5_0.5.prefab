@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7790519269644197528}
   - component: {fileID: 8089409267109221381}
   m_Layer: 0
-  m_Name: CoinLine_5
+  m_Name: CoinLine_5_0
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0

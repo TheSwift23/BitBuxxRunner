@@ -27,7 +27,7 @@ public class PlayerMotor : MonoBehaviour
     [SerializeField] private AudioClip moneyPickUpSfx;
     private float volume = 0.5f;
 
-    private const float LANE_DISTANCE = 3.0f;
+    private const float LANE_DISTANCE = 2.5f;
     private const float TURN_SPEED = 0.05f;
     
     private bool isGameStarted = false;

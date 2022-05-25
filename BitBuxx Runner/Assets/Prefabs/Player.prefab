@@ -26,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5203353612013877189}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.2, z: 0}
-  m_LocalScale: {x: 0.13598068, y: 0.123744, z: 0.5156}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 0.65, y: 0.65, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1897326302338016968}
@@ -43,10 +43,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 1.3695781
-  m_Height: 20.746956
+  m_Radius: 0.99
+  m_Height: 4.6668262
   m_Direction: 1
-  m_Center: {x: 0.82762504, y: -0.24106394, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &1532737493
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -88,12 +88,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b4bafde796abbd64b826c958386b18b2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4edb553a4b94e804db58dc7e73fe630d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 20, y: 20}
+  m_Size: {x: 1.86, y: 4.506592}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -189,13 +189,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
+  m_Height: 2.5
   m_Radius: 0.5
   m_SlopeLimit: 50
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!114 &1685628355
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,6 +7,7 @@ public class PlayerMotor : MonoBehaviour
     [Header("Movement")]
     private CharacterController controller; 
     [SerializeField] float jumpForce = 4.0f;
+    [SerializeField] float fallForce = 8.0f; 
     [SerializeField] float wallRunForce = 2.5f; 
     [SerializeField] float gravity = 12.0f;
     private float verticalVelocity;
@@ -142,7 +143,9 @@ public class PlayerMotor : MonoBehaviour
             // Fast Falling 
             if (MobileInputs.Instance.SwipeDown || Input.GetKeyDown(KeyCode.S))
             {
-                verticalVelocity = -jumpForce; 
+                verticalVelocity = -fallForce;
+                StartSliding();
+                Invoke("StopSliding", 1.0f);
             }
         }
 

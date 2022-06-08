@@ -10,6 +10,8 @@ public class PlayerMotor : MonoBehaviour
     [SerializeField] float fallForce = 8.0f; 
     [SerializeField] float wallRunForce = 2.5f; 
     [SerializeField] float gravity = 12.0f;
+    private bool canSlide = false; // have to create a timer for sliding so player cannot spam slide ;) 
+    private float slidingTimer = 3.0f; 
     private float verticalVelocity;
     private int desiredLane = 1; // 0 = Left; 1 = Middle; 2 = Right
 
@@ -43,7 +45,8 @@ public class PlayerMotor : MonoBehaviour
     {
         speed = originalSpeed; 
         controller = GetComponent<CharacterController>();
-        anim = GetComponent<Animator>(); 
+        anim = GetComponent<Animator>();
+        //sliding = false; 
     }
 
     private void Update()
@@ -87,9 +90,6 @@ public class PlayerMotor : MonoBehaviour
             StartWalllRunning();
         }
 
-        Debug.Log("WL " + wallRunningLeft);
-        Debug.Log("WR " + wallRunning); 
-
         //Calcuate where to be in the future
         Vector3 targetPosition = transform.position.z * Vector3.forward;
         if(desiredLane == 0)
@@ -117,7 +117,9 @@ public class PlayerMotor : MonoBehaviour
         Vector3 moveVector = Vector3.zero;
         moveVector.x = (targetPosition - transform.position).normalized.x * speed;
 
-        bool isGrounded = IsGrounded(); 
+        bool isGrounded = IsGrounded();
+
+        Debug.Log(isGrounded); 
 
         // Calculate Y 
         if (IsGrounded()) // if grounded 
@@ -127,28 +129,39 @@ public class PlayerMotor : MonoBehaviour
             if (MobileInputs.Instance.SwipeUp || Input.GetKeyDown(KeyCode.W) && wallRunning == false)
             {
                 //Jump
-                anim.SetTrigger("Jump"); 
-                verticalVelocity = jumpForce; 
-            }else if (MobileInputs.Instance.SwipeDown || Input.GetKeyDown(KeyCode.S))
+                anim.SetTrigger("Jump");
+                verticalVelocity = jumpForce;
+            }
+            
+            if (MobileInputs.Instance.SwipeDown || Input.GetKeyDown(KeyCode.S) && canSlide == false)
             {
                 //Slide
                 StartSliding();
-                Invoke("StopSliding", 1.0f); 
+                Invoke("StopSliding", 1.0f);
             }
         }
         else
         {
             verticalVelocity -= (gravity * Time.deltaTime);
 
-            // Fast Falling 
+            // Fast Falling
             if (MobileInputs.Instance.SwipeDown || Input.GetKeyDown(KeyCode.S))
             {
                 verticalVelocity = -fallForce;
-                StartSliding();
-                Invoke("StopSliding", 1.0f);
             }
         }
 
+        if (canSlide == true)
+        {
+            slidingTimer--; 
+        }
+
+        if (slidingTimer >= 0)
+        {
+            canSlide = false;
+        }
+
+        Debug.Log("canSlide is " + canSlide);
         moveVector.y = verticalVelocity;
         moveVector.z = speed;
 
@@ -180,9 +193,10 @@ public class PlayerMotor : MonoBehaviour
     
     void StartSliding()
     {
+        canSlide = true; 
         anim.SetBool("Sliding", true);
         controller.height /= 2;
-        controller.center = new Vector3(controller.center.x, controller.center.y / 2, controller.center.z); 
+        controller.center = new Vector3(controller.center.x, controller.center.y / 2, controller.center.z);
     }
 
     void StopSliding()
@@ -190,7 +204,7 @@ public class PlayerMotor : MonoBehaviour
 
         anim.SetBool("Sliding", false);
         controller.height *= 2;
-        controller.center = new Vector3(controller.center.x, controller.center.y * 2, controller.center.z);
+        controller.center = new Vector3(controller.center.x, controller.center.y * 2, controller.center.z); 
     }
     private void MoveLane(bool goingRight)
     {

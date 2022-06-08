@@ -5,10 +5,10 @@ using UnityEngine;
 public class OutsideSpawner : MonoBehaviour
 {
     //How far should buildings be behind the player before pushing back infront of him. 
-    private const float DISTANCE_TO_RESPAWN = 30.0f;
+    private const float DISTANCE_TO_RESPAWN = 55.0f;
 
     //Additional paralax effect. 
-    public float scrollSpeed = -6.5f;
+    public float scrollSpeed = -4.5f;
     public float totalLength; 
     public bool IsScrolling { set; get; }
 

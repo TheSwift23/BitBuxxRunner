@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +11,7 @@ public class PlayerMotor : MonoBehaviour
     [SerializeField] float fallForce = 8.0f; 
     [SerializeField] float wallRunForce = 2.5f; 
     [SerializeField] float gravity = 12.0f;
-    private bool canSlide = false; // have to create a timer for sliding so player cannot spam slide ;) 
+    //private bool canSlide = false; // have to create a timer for sliding so player cannot spam slide ;) 
     private float slidingTimer = 3.0f; 
     private float verticalVelocity;
     private int desiredLane = 1; // 0 = Left; 1 = Middle; 2 = Right
@@ -118,8 +119,9 @@ public class PlayerMotor : MonoBehaviour
         moveVector.x = (targetPosition - transform.position).normalized.x * speed;
 
         bool isGrounded = IsGrounded();
+        Debug.Log(anim.GetBool("Sliding"));
 
-        Debug.Log(isGrounded); 
+        //Debug.Log(isGrounded); 
 
         // Calculate Y 
         if (IsGrounded()) // if grounded 
@@ -132,12 +134,14 @@ public class PlayerMotor : MonoBehaviour
                 anim.SetTrigger("Jump");
                 verticalVelocity = jumpForce;
             }
-            
-            if (MobileInputs.Instance.SwipeDown || Input.GetKeyDown(KeyCode.S) && canSlide == false)
+            if (!IsSliding())
             {
-                //Slide
-                StartSliding();
-                Invoke("StopSliding", 1.0f);
+                if (MobileInputs.Instance.SwipeDown || Input.GetKeyDown(KeyCode.S))
+                {
+                    //Slide
+                    StartSliding();
+                    Invoke("StopSliding", 1.0f);
+                }
             }
         }
         else
@@ -151,17 +155,6 @@ public class PlayerMotor : MonoBehaviour
             }
         }
 
-        if (canSlide == true)
-        {
-            slidingTimer--; 
-        }
-
-        if (slidingTimer >= 0)
-        {
-            canSlide = false;
-        }
-
-        Debug.Log("canSlide is " + canSlide);
         moveVector.y = verticalVelocity;
         moveVector.z = speed;
 
@@ -176,7 +169,12 @@ public class PlayerMotor : MonoBehaviour
             transform.forward = Vector3.Lerp(transform.forward, dir, TURN_SPEED); 
         }
     }
-    
+
+    private bool IsSliding()
+    {
+        return anim.GetBool("Sliding");
+    }
+
     void StartWalllRunning()
     {
         anim.SetBool("WallRun", true);
@@ -193,7 +191,6 @@ public class PlayerMotor : MonoBehaviour
     
     void StartSliding()
     {
-        canSlide = true; 
         anim.SetBool("Sliding", true);
         controller.height /= 2;
         controller.center = new Vector3(controller.center.x, controller.center.y / 2, controller.center.z);

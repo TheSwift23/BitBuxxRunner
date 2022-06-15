@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -143,12 +143,12 @@ TextureImporter:
       name: BitBuxxRunSpritesheet_Offic_0
       rect:
         serializedVersion: 2
-        x: 152
+        x: 0
         y: 0
-        width: 186
-        height: 450
+        width: 500
+        height: 500
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -161,127 +161,127 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BitBuxxRunSpritesheet_Offic_11
+      name: BitBuxxRunSpritesheet_Offic_1
       rect:
         serializedVersion: 2
-        x: 642
+        x: 500
         y: 0
-        width: 186
-        height: 450
+        width: 500
+        height: 500
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18651019deae6ff46937dff071a7826e
-      internalID: 449842025
+      spriteID: dcb58246cd1c20e498a3d1bf439dfa6c
+      internalID: 1583613892
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BitBuxxRunSpritesheet_Offic_19
+      name: BitBuxxRunSpritesheet_Offic_2
       rect:
         serializedVersion: 2
-        x: 1142
+        x: 1000
         y: 0
-        width: 198
-        height: 450
+        width: 500
+        height: 500
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88a2dc5ab12f70544b9a7d083ece21a6
-      internalID: -1678618524
+      spriteID: 4d075a1db789cc14ab4db26e2e06ed6b
+      internalID: -1851110746
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BitBuxxRunSpritesheet_Offic_21
+      name: BitBuxxRunSpritesheet_Offic_3
       rect:
         serializedVersion: 2
-        x: 1658
+        x: 1500
         y: 0
-        width: 189
-        height: 450
+        width: 500
+        height: 500
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eefee07347e28064084d467ca170eea8
-      internalID: -1364266712
+      spriteID: a4c38c28c4612fd4daba98374349296e
+      internalID: 831304728
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BitBuxxRunSpritesheet_Offic_25
+      name: BitBuxxRunSpritesheet_Offic_4
       rect:
         serializedVersion: 2
-        x: 2663
+        x: 2000
         y: 0
-        width: 189
-        height: 450
+        width: 500
+        height: 500
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43a70e2381644924492e3eb32433ebfb
-      internalID: -373086854
+      spriteID: 0e081b99187c1c649a959758e7944227
+      internalID: -1008198844
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BitBuxxRunSpritesheet_Offic_26
+      name: BitBuxxRunSpritesheet_Offic_5
       rect:
         serializedVersion: 2
-        x: 3150
+        x: 2500
         y: 0
-        width: 183
-        height: 450
+        width: 500
+        height: 500
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee88ea250c7254f41b25668f650f2e09
-      internalID: -1072741515
+      spriteID: 2be34319a50cf93479b70a0eca80a691
+      internalID: -692445254
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BitBuxxRunSpritesheet_Offic_28
+      name: BitBuxxRunSpritesheet_Offic_6
       rect:
         serializedVersion: 2
-        x: 2141
+        x: 3000
         y: 0
-        width: 173
-        height: 450
+        width: 500
+        height: 500
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ff721c2f35e57b4c816ba1d36dd517b
-      internalID: -438124507
+      spriteID: 53cc4be8b05b09545bab30bb96e4d612
+      internalID: -1574034019
       vertices: []
       indices: 
       edges: []
@@ -297,77 +297,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BitBuxxRunSpritesheet_Offic_46: 1784838179
-      BitBuxxRunSpritesheet_Offic_16: -391056573
-      BitBuxxRunSpritesheet_Offic_58: 1356608122
-      BitBuxxRunSpritesheet_Offic_41: -1546210113
-      BitBuxxRunSpritesheet_Offic_28: -438124507
-      BitBuxxRunSpritesheet_Offic_31: -1090226260
-      BitBuxxRunSpritesheet_Offic_57: 1402292526
-      BitBuxxRunSpritesheet_Offic_1: 1583613892
-      BitBuxxRunSpritesheet_Offic_62: 317036360
-      BitBuxxRunSpritesheet_Offic_6: -1574034019
-      BitBuxxRunSpritesheet_Offic_43: -1488352207
-      BitBuxxRunSpritesheet_Offic_26: -1072741515
-      BitBuxxRunSpritesheet_Offic_63: 21209461
-      BitBuxxRunSpritesheet_Offic_48: 1524351699
-      BitBuxxRunSpritesheet_Offic_21: -1364266712
-      BitBuxxRunSpritesheet_Offic_50: 323351917
-      BitBuxxRunSpritesheet_Offic_47: 334463077
-      BitBuxxRunSpritesheet_Offic_53: -1335414135
-      BitBuxxRunSpritesheet_Offic_65: -1072049094
-      BitBuxxRunSpritesheet_Offic_17: 2022250529
-      BitBuxxRunSpritesheet_Offic_2: -1851110746
-      BitBuxxRunSpritesheet_Offic_36: -1252562209
-      BitBuxxRunSpritesheet_Offic_55: -492519123
-      BitBuxxRunSpritesheet_Offic_45: 247679181
-      BitBuxxRunSpritesheet_Offic_35: 423068660
-      BitBuxxRunSpritesheet_Offic_30: 1118453725
-      BitBuxxRunSpritesheet_Offic_29: -1804745887
-      BitBuxxRunSpritesheet_Offic_52: 1903685400
-      BitBuxxRunSpritesheet_Offic_27: 1446436217
-      BitBuxxRunSpritesheet_Offic_13: -1639112298
-      BitBuxxRunSpritesheet_Offic_20: 351357964
-      BitBuxxRunSpritesheet_Offic_15: 404074952
-      BitBuxxRunSpritesheet_Offic_19: -1678618524
-      BitBuxxRunSpritesheet_Offic_33: 1589522736
-      BitBuxxRunSpritesheet_Offic_9: -746569718
       BitBuxxRunSpritesheet_Offic_3: 831304728
-      BitBuxxRunSpritesheet_Offic_11: 449842025
-      BitBuxxRunSpritesheet_Offic_42: -590584986
-      BitBuxxRunSpritesheet_Offic_14: -66618351
-      BitBuxxRunSpritesheet_Offic_64: 1334997899
-      BitBuxxRunSpritesheet_Offic_24: -439656730
-      BitBuxxRunSpritesheet_Offic_25: -373086854
-      BitBuxxRunSpritesheet_Offic_38: -1047789718
-      BitBuxxRunSpritesheet_Offic_44: -421192747
-      BitBuxxRunSpritesheet_Offic_18: -1027706161
-      BitBuxxRunSpritesheet_Offic_49: 180156311
-      BitBuxxRunSpritesheet_Offic_34: -323666500
-      BitBuxxRunSpritesheet_Offic_60: 1713057483
-      BitBuxxRunSpritesheet_Offic_68: 610648317
-      BitBuxxRunSpritesheet_Offic_54: -1273529315
-      BitBuxxRunSpritesheet_Offic_10: 722546059
-      BitBuxxRunSpritesheet_Offic_23: -2061192690
+      BitBuxxRunSpritesheet_Offic_1: 1583613892
+      BitBuxxRunSpritesheet_Offic_6: -1574034019
       BitBuxxRunSpritesheet_Offic_4: -1008198844
-      BitBuxxRunSpritesheet_Offic_8: 342548254
-      BitBuxxRunSpritesheet_Offic_12: -405883220
-      BitBuxxRunSpritesheet_Offic_67: 1770096667
-      BitBuxxRunSpritesheet_Offic_70: -736957075
       BitBuxxRunSpritesheet_Offic_5: -692445254
-      BitBuxxRunSpritesheet_Offic_32: 118466458
-      BitBuxxRunSpritesheet_Offic_22: 1621681540
-      BitBuxxRunSpritesheet_Offic_56: 1624907634
-      BitBuxxRunSpritesheet_Offic_39: -1391351820
-      BitBuxxRunSpritesheet_Offic_37: -396012303
-      BitBuxxRunSpritesheet_Offic_59: -1642105910
+      BitBuxxRunSpritesheet_Offic_2: -1851110746
       BitBuxxRunSpritesheet_Offic_0: -430001382
-      BitBuxxRunSpritesheet_Offic_51: -538056091
-      BitBuxxRunSpritesheet_Offic_66: 1749631995
-      BitBuxxRunSpritesheet_Offic_7: 1490748469
-      BitBuxxRunSpritesheet_Offic_61: 1961568449
-      BitBuxxRunSpritesheet_Offic_40: 688989244
-      BitBuxxRunSpritesheet_Offic_69: 192998224
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

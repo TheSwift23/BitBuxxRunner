@@ -156,7 +156,6 @@ MonoBehaviour:
   currentSpawnZ: 1
   ramps:
   - {fileID: 6028642228739065680, guid: 026c37b7f87576141b0090a4a4ced610, type: 3}
-  - {fileID: 3244278527656544509, guid: 629928b254dbf0a42a7c2ec62f90cb47, type: 3}
   longblocks:
   - {fileID: 3690636593744043254, guid: 3f2c331529ae8184889fee039150ad30, type: 3}
   - {fileID: 5216004264799385612, guid: 38d4e7b9944cab144a1f21e3840412af, type: 3}

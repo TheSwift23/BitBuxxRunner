@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.5261997, g: 0.6734772, b: 0.7364945, a: 1}
+  m_IndirectSpecularColor: {r: 0.5252057, g: 0.6720277, b: 0.7359402, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e898796f2ca68c64baee754c8a21967f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SHOW_COLLIDER: 0
+  SHOW_COLLIDER: 1
   currentSpawnZ: 1
   ramps:
   - {fileID: 6028642228739065680, guid: 026c37b7f87576141b0090a4a4ced610, type: 3}

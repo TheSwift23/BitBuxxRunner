@@ -9,7 +9,11 @@ EditorUserSettings:
       value: 337f73
       flags: 0
     UnityRemoteDevice:
+<<<<<<< Updated upstream
       value: 0a7e6748245b10
+=======
+      value: 225f4d46245b0d4902070862342649191512
+>>>>>>> Stashed changes
       flags: 0
     UnityRemoteResolution:
       value: 275e4308165c135e

@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Atlas_Blocks
+  m_Name: Atlas_Ramp
   m_Shader: {fileID: 4800000, guid: ad39aab566ccacd438787d16430b776c, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -41,7 +41,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 4cdf03faba7299e4983a2927adc7a9bb, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3378cc2155ec12a498ce48c8b18e9282, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:

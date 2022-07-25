@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.5252057, g: 0.6720277, b: 0.7359402, a: 1}
+  m_IndirectSpecularColor: {r: 0.5261997, g: 0.6734772, b: 0.7364945, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -156,7 +156,6 @@ MonoBehaviour:
   currentSpawnZ: 1
   ramps:
   - {fileID: 6028642228739065680, guid: 026c37b7f87576141b0090a4a4ced610, type: 3}
-  - {fileID: 3244278527656544509, guid: 629928b254dbf0a42a7c2ec62f90cb47, type: 3}
   longblocks:
   - {fileID: 3690636593744043254, guid: 3f2c331529ae8184889fee039150ad30, type: 3}
   - {fileID: 5216004264799385612, guid: 38d4e7b9944cab144a1f21e3840412af, type: 3}
@@ -177,6 +176,7 @@ MonoBehaviour:
   - {fileID: 1306094940563248754, guid: 57418c03bc23d654ab00e5fb81e0d89c, type: 3}
   - {fileID: 1235250780529358361, guid: c0671d2d58be299458373f9438830c35, type: 3}
   - {fileID: 4534295039930084113, guid: 2601b037dc73ad246b5d5136bc26d4ed, type: 3}
+  - {fileID: 4534295039930084113, guid: ef244d702fa5bda41a00fb397f2e036b, type: 3}
   availableTransitions:
   - {fileID: 8663477558491487341, guid: f17f582eac2ed62458f5fb968b62a4f1, type: 3}
   segments: []
@@ -4305,7 +4305,7 @@ RectTransform:
   m_GameObject: {fileID: 2106621859}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1.7}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 503775092}
@@ -4317,7 +4317,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 1003}
+  m_AnchoredPosition: {x: 0, y: 1110.6724}
   m_SizeDelta: {x: 400, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2106621861

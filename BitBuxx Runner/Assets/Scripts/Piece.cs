@@ -8,8 +8,10 @@ public enum PieceType
     ramp = 0, 
     longBlock = 1, 
     jump = 2, 
-    slide = 3, 
-    wallRun = 4,
+    manHole = 3,
+    slide = 4, 
+    wallRunLeft = 5,
+    wallRunRight = 6, 
 }
 
 public class Piece : MonoBehaviour

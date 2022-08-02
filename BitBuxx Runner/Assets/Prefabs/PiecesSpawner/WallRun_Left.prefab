@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7027885159281032079}
   m_Layer: 0
   m_Name: Collider
-  m_TagString: WallRun
+  m_TagString: WallRunLeft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7027885159281032077}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.5, y: 6.5, z: -0.3784}
+  m_LocalPosition: {x: -5, y: 6.5, z: 0}
   m_LocalScale: {x: 0.0012, y: 9, z: 9.6}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -95,8 +95,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1743, y: 1.1091992, z: 1.2432266}
-  m_Center: {x: 871, y: -0.012159507, z: -0.19137734}
+  m_Size: {x: 3032.0122, y: 1.3575575, z: 1.103238}
+  m_Center: {x: 1515.5046, y: -0.13633823, z: -0.04355696}
 --- !u!1 &7027885160367228393
 GameObject:
   m_ObjectHideFlags: 0
@@ -142,4 +142,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ca833f9b44b2e84aa81baeab52fa8ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 4
+  type: 5

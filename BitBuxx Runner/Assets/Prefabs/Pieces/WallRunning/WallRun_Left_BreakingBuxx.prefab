@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2127420980791849514}
   - component: {fileID: 2127420980791849515}
   m_Layer: 0
-  m_Name: Collider
+  m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2127420980791849518}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.5, y: 6.4, z: -0.3784}
+  m_LocalPosition: {x: -5, y: 6.5, z: 0}
   m_LocalScale: {x: 0.0012, y: 9, z: 9.6}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 1092685683082471231}
   - component: {fileID: 307072403732927234}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: Left_Pole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -110,8 +110,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3672643030591765380}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.504, y: 1, z: -5.105}
-  m_LocalScale: {x: 0.09622983, y: 1, z: 0.14580606}
+  m_LocalPosition: {x: -5, y: 1, z: -4}
+  m_LocalScale: {x: 0.09623, y: 1, z: 0.14581}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2247968973794433456}
@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 6047745680040439975}
   - component: {fileID: 5279601991671778773}
   m_Layer: 0
-  m_Name: Cylinder (1)
+  m_Name: Right_Pole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -208,8 +208,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6689745692983055087}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.504, y: 1, z: 4.339}
-  m_LocalScale: {x: 0.09622983, y: 1, z: 0.14580606}
+  m_LocalPosition: {x: -5, y: 1, z: 4}
+  m_LocalScale: {x: 0.09623, y: 1, z: 0.14581}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2247968973794433456}
@@ -290,7 +290,7 @@ GameObject:
   - component: {fileID: 2247968973794433456}
   - component: {fileID: 2246660816123087662}
   m_Layer: 0
-  m_Name: P1
+  m_Name: WallRun_Left_BreakingBuxx
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -326,5 +326,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0e59c200ed6ef64d9d4038832998212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 4
+  type: 5
   visualIndex: 1

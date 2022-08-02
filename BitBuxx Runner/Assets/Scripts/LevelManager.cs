@@ -24,8 +24,10 @@ public class LevelManager : MonoBehaviour
     public List<Piece> ramps = new List<Piece>();
     public List<Piece> longblocks = new List<Piece>();
     public List<Piece> jumps = new List<Piece>();
+    public List<Piece> manHole = new List<Piece>(); 
     public List<Piece> slides = new List<Piece>();
-    public List<Piece> wallRun = new List<Piece>(); 
+    public List<Piece> wallRunLeft = new List<Piece>();
+    public List<Piece> wallRunRight = new List<Piece>(); 
     [HideInInspector]
     public List<Piece> pieces = new List<Piece>(); // All the pieces in the pool. 
 
@@ -164,10 +166,14 @@ public class LevelManager : MonoBehaviour
                 go = longblocks[visualIndex].gameObject;
             else if (pt == PieceType.jump)
                 go = jumps[visualIndex].gameObject;
+            else if (pt == PieceType.manHole)
+                go = manHole[visualIndex].gameObject;
             else if (pt == PieceType.slide)
                 go = slides[visualIndex].gameObject;
-            else if (pt == PieceType.wallRun)
-                go = wallRun[visualIndex].gameObject; 
+            else if (pt == PieceType.wallRunLeft)
+                go = wallRunLeft[visualIndex].gameObject;
+            else if (pt == PieceType.wallRunRight)
+                go = wallRunRight[visualIndex].gameObject; 
 
             go = Instantiate(go);
             p = go.GetComponent<Piece>();

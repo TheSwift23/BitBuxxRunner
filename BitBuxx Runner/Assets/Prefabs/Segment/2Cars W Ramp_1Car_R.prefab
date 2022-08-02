@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5207540625757390497}
   - component: {fileID: 5207540625757390498}
   m_Layer: 0
-  m_Name: CenterRamp_10
+  m_Name: 2Cars W Ramp_1Car_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

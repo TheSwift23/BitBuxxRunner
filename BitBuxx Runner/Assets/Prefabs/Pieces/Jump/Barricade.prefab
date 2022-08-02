@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4584708653754710033}
   - component: {fileID: 4593660616872749711}
   m_Layer: 0
-  m_Name: P0
+  m_Name: Barricade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60,11 +60,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6283526523716430503, guid: b251bb9cc751eee46854fc487668b6c4, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.78
+      value: 0.67749065
       objectReference: {fileID: 0}
     - target: {fileID: 6283526523716430503, guid: b251bb9cc751eee46854fc487668b6c4, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.95
+      value: 1.0148147
       objectReference: {fileID: 0}
     - target: {fileID: 6283526523716430503, guid: b251bb9cc751eee46854fc487668b6c4, type: 3}
       propertyPath: m_LocalScale.z
@@ -72,11 +72,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6283526523716430503, guid: b251bb9cc751eee46854fc487668b6c4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.121
       objectReference: {fileID: 0}
     - target: {fileID: 6283526523716430503, guid: b251bb9cc751eee46854fc487668b6c4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2
+      value: 1.151
       objectReference: {fileID: 0}
     - target: {fileID: 6283526523716430503, guid: b251bb9cc751eee46854fc487668b6c4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -112,7 +112,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6689524697678682271, guid: b251bb9cc751eee46854fc487668b6c4, type: 3}
       propertyPath: m_Name
-      value: LowBlock (1)
+      value: Visual
       objectReference: {fileID: 0}
     - target: {fileID: 7876092049551591357, guid: b251bb9cc751eee46854fc487668b6c4, type: 3}
       propertyPath: m_Size.x

@@ -8,6 +8,8 @@ TagManager:
   - Coin
   - LevelManager
   - WallRun
+  - WallRunRight
+  - WallRunLeft
   layers:
   - Default
   - TransparentFX

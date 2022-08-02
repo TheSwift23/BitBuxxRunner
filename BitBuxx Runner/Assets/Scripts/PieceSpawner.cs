@@ -15,6 +15,9 @@ public class PieceSpawner : MonoBehaviour
             case PieceType.jump:
                 amtObj = LevelManager.Instance.jumps.Count;
                 break;
+            case PieceType.manHole:
+                amtObj = LevelManager.Instance.manHole.Count;
+                break; 
             case PieceType.slide:
                 amtObj = LevelManager.Instance.slides.Count;
                 break;
@@ -24,8 +27,11 @@ public class PieceSpawner : MonoBehaviour
             case PieceType.ramp:
                 amtObj = LevelManager.Instance.ramps.Count;
                 break;
-            case PieceType.wallRun:
-                amtObj = LevelManager.Instance.wallRun.Count;
+            case PieceType.wallRunLeft:
+                amtObj = LevelManager.Instance.wallRunLeft.Count;
+                break;
+            case PieceType.wallRunRight:
+                amtObj = LevelManager.Instance.wallRunRight.Count;
                 break; 
         }
         currentPiece = LevelManager.Instance.GetPiece(type, Random.Range(0,amtObj)); 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1235250780529358362}
   - component: {fileID: 1235250780529358361}
   m_Layer: 0
-  m_Name: CenterSlide_15
+  m_Name: Car_L_Slide_Car_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

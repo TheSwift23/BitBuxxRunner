@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: 2809648353981047944}
   m_Layer: 0
   m_Name: Plane.003 (1)
-  m_TagString: Obstacle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -140,7 +140,7 @@ BoxCollider:
   m_GameObject: {fileID: 8237724145868246935}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.020000001, y: 0.019999998, z: 0.0000000024441857}
   m_Center: {x: 9.094947e-13, y: 0.0000000018626451, z: 0.000000007450581}
@@ -169,11 +169,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1131602441714353017, guid: aa5c6ce64f55f514ea6ac8c2dc4f1ce0, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.6999999
+      value: 0.7437499
       objectReference: {fileID: 0}
     - target: {fileID: 1131602441714353017, guid: aa5c6ce64f55f514ea6ac8c2dc4f1ce0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1131602441714353017, guid: aa5c6ce64f55f514ea6ac8c2dc4f1ce0, type: 3}
       propertyPath: m_LocalPosition.y

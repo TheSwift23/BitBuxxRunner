@@ -52,6 +52,7 @@ public class PlayerMotor : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(wallRunningLeft); 
         if (!isGameStarted)
         {
             return; 
@@ -80,6 +81,11 @@ public class PlayerMotor : MonoBehaviour
             wallRunning = true; 
         }
 
+        if (MobileInputs.Instance.SwipeRight && wallRunningRight == true || Input.GetKeyDown(KeyCode.D) && wallRunningRight == true)
+        {
+            wallRunning = true;
+        }
+
         if (MobileInputs.Instance.SwipeRight || Input.GetKeyDown(KeyCode.D))
         {
             //Move Right
@@ -99,19 +105,6 @@ public class PlayerMotor : MonoBehaviour
         }else if(desiredLane == 2)
         {
             targetPosition += Vector3.right * LANE_DISTANCE;
-        }
-        
-        //Caluclate WallRunning 
-        if (desiredLane == 0 && wallRunningLeft == true) // Might delete later. 
-        {
-            //Changed wall running to doing one more swipe. 
-            //Begin wallrunning to the left 
-            //StartWalllRunning();
-        }
-
-        if (desiredLane == 2 && wallRunningRight == true)
-        {
-            //Begin wallrunning to the right 
         }
         
         //Calculate move delta 
@@ -185,7 +178,9 @@ public class PlayerMotor : MonoBehaviour
     void StopWallRunning()
     {
         anim.SetBool("WallRun", false);
-        wallRunning = false; // Wall running finally works!!! LETS GOOOOOOOO!!!!!!
+        wallRunningLeft = false;
+        wallRunningRight = false; // Wall running finally works!!! LETS GOOOOOOOO!!!!!!
+        wallRunning = false; 
         verticalVelocity = -jumpForce; // Player needs to hit the ground faster when exiting wall run. 
     }
     
@@ -232,9 +227,14 @@ public class PlayerMotor : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "WallRun")
+        if(other.tag == "WallRunLeft")
         {
             wallRunningLeft = true; 
+        }
+
+        if(other.tag == "WallRunRight")
+        {
+            wallRunningRight = true; 
         }
 
         if(other.tag == "Coin")
@@ -245,9 +245,14 @@ public class PlayerMotor : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.tag == "WallRun")
+        if(other.tag == "WallRunLeft")
         {
             wallRunningLeft = false;
+            StopWallRunning(); // Figure out how to get player to lift in the air.
+        }
+        if (other.tag == "WallRunRight")
+        {
+            wallRunningRight = false;
             StopWallRunning(); // Figure out how to get player to lift in the air.
         }
     }

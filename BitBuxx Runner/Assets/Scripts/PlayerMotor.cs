@@ -32,7 +32,7 @@ public class PlayerMotor : MonoBehaviour
     private float volume = 0.5f;
 
     private const float LANE_DISTANCE = 2.5f;
-    private const float TURN_SPEED = 0.05f;
+    private const float TURN_SPEED = 0.1f;
     
     private bool isGameStarted = false;
     private bool wallRunningLeft;

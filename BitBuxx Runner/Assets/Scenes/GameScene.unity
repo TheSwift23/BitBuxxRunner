@@ -3731,6 +3731,10 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1685628351, guid: 54dcfae1b328ea243862dd52ae715b47, type: 3}
+      propertyPath: m_SlopeLimit
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 1897326302338016968, guid: 54dcfae1b328ea243862dd52ae715b47, type: 3}
       propertyPath: m_RootOrder
       value: 3

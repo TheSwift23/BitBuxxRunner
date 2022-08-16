@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7732755266502163483}
   - component: {fileID: 3884120897405823702}
   - component: {fileID: 8911846020927751031}
+  - component: {fileID: 4490109102634222198}
   m_Layer: 0
   m_Name: Wheel
   m_TagString: Untagged
@@ -83,6 +84,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!135 &4490109102634222198
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3723806401473899734}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3792264820733537888
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,6 +108,7 @@ GameObject:
   - component: {fileID: 4006659983754701562}
   - component: {fileID: 6470684865085465517}
   - component: {fileID: 7472436615234856180}
+  - component: {fileID: 8334105679514587686}
   m_Layer: 0
   m_Name: Wheel
   m_TagString: Untagged
@@ -166,6 +181,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!135 &8334105679514587686
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3792264820733537888}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4449642621760017613
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,11 +286,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4799857092017763126}
-  - component: {fileID: 995103622}
-  - component: {fileID: 995103621}
-  - component: {fileID: 995103620}
-  - component: {fileID: 995103619}
-  - component: {fileID: 995103623}
+  - component: {fileID: 6132338662324655191}
   m_Layer: 0
   m_Name: BuxxMobile
   m_TagString: Untagged
@@ -279,7 +303,7 @@ Transform:
   m_GameObject: {fileID: 5320814070111922572}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 1, z: 0.5}
+  m_LocalScale: {x: 0.6, y: 1, z: 0.6}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8569543092865509459}
@@ -291,7 +315,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &995103622
+--- !u!114 &6132338662324655191
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -300,66 +324,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5320814070111922572}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4a6617bb2a239047a2242ac9b1cc531, type: 3}
+  m_Script: {fileID: 11500000, guid: e0e59c200ed6ef64d9d4038832998212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 10
-  Acceleration: 0
-  Direction: {x: 1, y: 0, z: 0}
-  DirectionCanBeChangedBySpawner: 1
-  MovementSpace: 0
---- !u!114 &995103621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5320814070111922572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0bce0a8dd118a14bb804c28e9b44bd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &995103620
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5320814070111922572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72de0b0360096ea41a18d17864ecb963, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BoundsBasedOn: 0
-  LifeTime: 0
---- !u!114 &995103619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5320814070111922572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89a8cfe26a3a99741ab5f196acf474a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DestroyDistanceBehindBounds: 30
---- !u!65 &995103623
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5320814070111922572}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 4.9892154, y: 3.868598, z: 9.222786}
-  m_Center: {x: -0.05556035, y: 1.434299, z: -0.06301284}
+  type: 1
+  visualIndex: 0
 --- !u!1 &5663943287869073081
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,6 +423,7 @@ GameObject:
   - component: {fileID: 7721499972400478513}
   - component: {fileID: 3253456477757535629}
   - component: {fileID: 8743098790954505197}
+  - component: {fileID: 2272505465485706191}
   m_Layer: 0
   m_Name: Wheel
   m_TagString: Untagged
@@ -526,6 +496,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!135 &2272505465485706191
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7176574206955817992}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7510249113128093654
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,6 +520,7 @@ GameObject:
   - component: {fileID: 5878970826989673367}
   - component: {fileID: 980468431643753290}
   - component: {fileID: 7354114223229003417}
+  - component: {fileID: 5651167565482745369}
   m_Layer: 0
   m_Name: Wheel
   m_TagString: Untagged
@@ -609,3 +593,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!135 &5651167565482745369
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7510249113128093654}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}

@@ -25,7 +25,7 @@ Shader "DevShaders/BendWorld"
         void vert(inout appdata_full v) {
             float4 worldSpace = mul(unity_ObjectToWorld, v.vertex); 
             worldSpace.xyz -= _WorldSpaceCameraPos.xyz; 
-            worldSpace = float4(0.0f, (worldSpace.x * worldSpace.x) * -_Curvature, 0.0f, 0.0f); 
+            worldSpace = float4(0.0f, (worldSpace.z * worldSpace.z) * -_Curvature, 0.0f, 0.0f); 
 
             v.vertex += mul(unity_WorldToObject, worldSpace); 
         }

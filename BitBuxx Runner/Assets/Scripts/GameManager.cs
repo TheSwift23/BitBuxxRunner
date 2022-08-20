@@ -68,7 +68,6 @@ public class GameManager : MonoBehaviour
             titleMusic.Stop();
             mainMusic.Play(); 
             motor.StartGame();
-            FindObjectOfType<OutsideSpawner>().IsScrolling = true;
             FindObjectOfType<CameraMotor>().IsMoving = true;
             gameCanvas.SetTrigger("Show");
             menuAnim.SetTrigger("Hide"); 
@@ -123,8 +122,7 @@ public class GameManager : MonoBehaviour
     //Death menu pops up. 
     public void OnDeath()
     {
-        IsDead = true;
-        FindObjectOfType<OutsideSpawner>().IsScrolling = false; 
+        IsDead = true; 
         deathscoreText.text = score.ToString("0");
         deathcoinText.text = coinScore.ToString("0"); 
         deathMenuAnim.SetTrigger("Dead");

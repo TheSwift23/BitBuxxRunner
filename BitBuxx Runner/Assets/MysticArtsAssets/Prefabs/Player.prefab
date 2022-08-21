@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 7625799681462659765}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.75, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6789063537131941768}
@@ -71,21 +71,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3c76f450455580489c24af50ae51d81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallForce: 8
-  wallRunForce: 2.5
-  gravity: 12
-  JumpForce: 4
-  NumberOfJumpsAllowed: 2
-  CooldownBetweenJumps: 0
-  JumpsAllowedWhenGroundedOnly: 0
+  wallRunForce: 0
+  fallForce: 600
+  JumpForce: 800
+  NumberOfJumpsAllowed: 1
+  CooldownBetweenJumps: 1
+  JumpsAllowedWhenGroundedOnly: 1
   MinimalDelayBetweenJumps: 0.02
   UngroundedDurationAfterJump: 0.2
   GroundDistanceTolerance: 0.05
-  ShouldResetPosition: 1
+  ShouldResetPosition: 0
   ResetPositionSpeed: 0.5
-  _numberOfJumpsLeft: 0
+  _numberOfJumpsLeft: 1
   _ground: {fileID: 0}
-  MAX_SPEED: 20
+  MAX_SPEED: 30
   speedIncreaseLastTick: 0
   speedIncreaseTime: 1
   speedIncreaseAmount: 0.1
@@ -93,7 +92,7 @@ MonoBehaviour:
   moneyPickUpSfx: {fileID: 8300000, guid: e4480d62d55dfcf41888eeef8a833e85, type: 3}
   LaneWidth: 3
   NumberOfLanes: 3
-  ChangingLaneSpeed: 1
+  ChangingLaneSpeed: 0.2
 --- !u!114 &1685628355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,7 +240,8 @@ AudioSource:
   m_GameObject: {fileID: 8704985507646104830}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: -5954819974355843269, guid: 1ca4816daa2488a4cb731ca281083685, type: 2}
+  OutputAudioMixerGroup: {fileID: -5954819974355843269, guid: 1ca4816daa2488a4cb731ca281083685,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1

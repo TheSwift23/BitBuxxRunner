@@ -395,6 +395,13 @@ public class PlayerMotor : MonoBehaviour
         {
             audioSource.PlayOneShot(moneyPickUpSfx, volume);
         }
+
+        switch (other.gameObject.tag)
+        {
+            case "Obstacle":
+                Crash();
+                break;
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -413,11 +420,6 @@ public class PlayerMotor : MonoBehaviour
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-          switch (hit.gameObject.tag)
-        {
-            case "Obstacle":
-                Crash();
-                break; 
-        }
+          
     }
 }

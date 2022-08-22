@@ -1171,85 +1171,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 434094749}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &499506258
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 499506259}
-  - component: {fileID: 499506261}
-  - component: {fileID: 499506260}
-  m_Layer: 0
-  m_Name: SpikeSpawner4
-  m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &499506259
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 499506258}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.25, z: -9}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1312362338}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &499506260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 499506258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b7277539b95c0d45895792ecc99ce66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MutualizeWaitingPools: 0
-  NestWaitingPool: 1
-  NestUnderThis: 0
-  GameObjectToPool: {fileID: 144682, guid: 63bb82a356f7f1a43bed59c7b797a80d, type: 3}
-  PoolSize: 20
-  PoolCanExpand: 1
---- !u!114 &499506261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 499506258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6733ca52c3fdb5843abc7ba0ed3608c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MinimumSize: {x: 1, y: 1, z: 1}
-  MaximumSize: {x: 1, y: 1, z: 1}
-  PreserveRatio: 0
-  MinimumRotation: {x: 0, y: 90, z: 0}
-  MaximumRotation: {x: 0, y: 90, z: 0}
-  Spawning: 1
-  OnlySpawnWhileGameInProgress: 1
-  InitialDelay: 0
-  GapOrigin: 0
-  MinimumGap: {x: 40, y: 0, z: 0}
-  MaximumGap: {x: 80, y: 0, z: 0}
-  MinimumYClamp: 0
-  MaximumYClamp: 0
-  MinimumZClamp: 0
-  MaximumZClamp: 0
-  SpawnRotatedToDirection: 1
 --- !u!1 &503775091
 GameObject:
   m_ObjectHideFlags: 0
@@ -3346,10 +3267,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1943786107}
-  - {fileID: 1955144908}
-  - {fileID: 1926070261}
-  - {fileID: 499506259}
-  - {fileID: 1769854238}
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4383,85 +4300,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1769854237
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1769854238}
-  - component: {fileID: 1769854240}
-  - component: {fileID: 1769854239}
-  m_Layer: 0
-  m_Name: SpikeSpawner5
-  m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1769854238
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1769854237}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.25, z: -12}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1312362338}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1769854239
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1769854237}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b7277539b95c0d45895792ecc99ce66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MutualizeWaitingPools: 0
-  NestWaitingPool: 1
-  NestUnderThis: 0
-  GameObjectToPool: {fileID: 144682, guid: 63bb82a356f7f1a43bed59c7b797a80d, type: 3}
-  PoolSize: 20
-  PoolCanExpand: 1
---- !u!114 &1769854240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1769854237}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6733ca52c3fdb5843abc7ba0ed3608c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MinimumSize: {x: 1, y: 1, z: 1}
-  MaximumSize: {x: 1, y: 1, z: 1}
-  PreserveRatio: 0
-  MinimumRotation: {x: 0, y: 90, z: 0}
-  MaximumRotation: {x: 0, y: 90, z: 0}
-  Spawning: 1
-  OnlySpawnWhileGameInProgress: 1
-  InitialDelay: 0
-  GapOrigin: 0
-  MinimumGap: {x: 30, y: 0, z: 0}
-  MaximumGap: {x: 60, y: 0, z: 0}
-  MinimumYClamp: 0
-  MaximumYClamp: 0
-  MinimumZClamp: 0
-  MaximumZClamp: 0
-  SpawnRotatedToDirection: 1
 --- !u!1001 &1793931589
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4785,85 +4623,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1907782409}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1926070260
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1926070261}
-  - component: {fileID: 1926070263}
-  - component: {fileID: 1926070262}
-  m_Layer: 0
-  m_Name: SpikeSpawner3
-  m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1926070261
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1926070260}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.25, z: -6}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1312362338}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1926070262
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1926070260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b7277539b95c0d45895792ecc99ce66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MutualizeWaitingPools: 0
-  NestWaitingPool: 1
-  NestUnderThis: 0
-  GameObjectToPool: {fileID: 144682, guid: 63bb82a356f7f1a43bed59c7b797a80d, type: 3}
-  PoolSize: 20
-  PoolCanExpand: 1
---- !u!114 &1926070263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1926070260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6733ca52c3fdb5843abc7ba0ed3608c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MinimumSize: {x: 1, y: 1, z: 1}
-  MaximumSize: {x: 1, y: 1, z: 1}
-  PreserveRatio: 0
-  MinimumRotation: {x: 0, y: 90, z: 0}
-  MaximumRotation: {x: 0, y: 90, z: 0}
-  Spawning: 1
-  OnlySpawnWhileGameInProgress: 1
-  InitialDelay: 0
-  GapOrigin: 0
-  MinimumGap: {x: 30, y: 0, z: 0}
-  MaximumGap: {x: 60, y: 0, z: 0}
-  MinimumYClamp: 0
-  MaximumYClamp: 0
-  MinimumZClamp: 0
-  MaximumZClamp: 0
-  SpawnRotatedToDirection: 1
 --- !u!1 &1943786106
 GameObject:
   m_ObjectHideFlags: 0
@@ -4876,7 +4635,7 @@ GameObject:
   - component: {fileID: 1943786109}
   - component: {fileID: 1943786110}
   m_Layer: 0
-  m_Name: SpikeSpawner1
+  m_Name: SpikeSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -4911,15 +4670,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MinimumSize: {x: 1, y: 1, z: 1}
   MaximumSize: {x: 1, y: 1, z: 1}
-  PreserveRatio: 0
+  PreserveRatio: 1
   MinimumRotation: {x: 0, y: 90, z: 0}
   MaximumRotation: {x: 0, y: 90, z: 0}
   Spawning: 1
   OnlySpawnWhileGameInProgress: 1
   InitialDelay: 0
   GapOrigin: 0
-  MinimumGap: {x: 30, y: 0, z: 0}
-  MaximumGap: {x: 60, y: 0, z: 0}
+  MinimumGap: {x: 20, y: 0, z: 0}
+  MaximumGap: {x: 50, y: 0, z: 0}
   MinimumYClamp: 0
   MaximumYClamp: 0
   MinimumZClamp: 0
@@ -4941,12 +4700,32 @@ MonoBehaviour:
   NestWaitingPool: 1
   NestUnderThis: 0
   Pool:
-  - GameObjectToPool: {fileID: 5320814070111922572, guid: 4b9c3efa4d485c64d8dcb2acc01bd3c8,
+  - GameObjectToPool: {fileID: 6055661981515659559, guid: 0fbd616fccee2e842a563e50a1bb5203,
       type: 3}
     PoolSize: 10
     PoolCanExpand: 1
     Enabled: 1
-  - GameObjectToPool: {fileID: 5911222432362467514, guid: b22d855a6eb0d324da0f9bbd5a2bd3f1,
+  - GameObjectToPool: {fileID: 3862056835596623917, guid: 7bf1933c86690f248a0cc0ce3361a4e0,
+      type: 3}
+    PoolSize: 10
+    PoolCanExpand: 1
+    Enabled: 1
+  - GameObjectToPool: {fileID: 8168389539892380360, guid: 6dbfaa6871c3d544284024bacc043597,
+      type: 3}
+    PoolSize: 10
+    PoolCanExpand: 1
+    Enabled: 1
+  - GameObjectToPool: {fileID: 5738071545441079060, guid: d4c862f632bb24b41988f435b658d29a,
+      type: 3}
+    PoolSize: 10
+    PoolCanExpand: 1
+    Enabled: 1
+  - GameObjectToPool: {fileID: 3289876913614331804, guid: 824261a941b7a56409e7f366968642d4,
+      type: 3}
+    PoolSize: 10
+    PoolCanExpand: 1
+    Enabled: 1
+  - GameObjectToPool: {fileID: 988265047844594877, guid: dbf94cfde93960f41b6cc271c03802c1,
       type: 3}
     PoolSize: 10
     PoolCanExpand: 1
@@ -4954,85 +4733,6 @@ MonoBehaviour:
   PoolingMethod: 3
   CanPoolSameObjectTwice: 0
   MutualizedPoolName: 
---- !u!1 &1955144907
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1955144908}
-  - component: {fileID: 1955144910}
-  - component: {fileID: 1955144909}
-  m_Layer: 0
-  m_Name: SpikeSpawner2
-  m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1955144908
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1955144907}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.25, z: -3}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1312362338}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1955144909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1955144907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b7277539b95c0d45895792ecc99ce66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MutualizeWaitingPools: 0
-  NestWaitingPool: 1
-  NestUnderThis: 0
-  GameObjectToPool: {fileID: 144682, guid: 63bb82a356f7f1a43bed59c7b797a80d, type: 3}
-  PoolSize: 20
-  PoolCanExpand: 1
---- !u!114 &1955144910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1955144907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6733ca52c3fdb5843abc7ba0ed3608c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MinimumSize: {x: 1, y: 1, z: 1}
-  MaximumSize: {x: 1, y: 1, z: 1}
-  PreserveRatio: 0
-  MinimumRotation: {x: 0, y: 90, z: 0}
-  MaximumRotation: {x: 0, y: 90, z: 0}
-  Spawning: 1
-  OnlySpawnWhileGameInProgress: 1
-  InitialDelay: 0
-  GapOrigin: 0
-  MinimumGap: {x: 40, y: 0, z: 0}
-  MaximumGap: {x: 80, y: 0, z: 0}
-  MinimumYClamp: 0
-  MaximumYClamp: 0
-  MinimumZClamp: 0
-  MaximumZClamp: 0
-  SpawnRotatedToDirection: 1
 --- !u!1 &1974467616
 GameObject:
   m_ObjectHideFlags: 0

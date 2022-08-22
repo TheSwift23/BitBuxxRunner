@@ -264,6 +264,7 @@ GameObject:
   - component: {fileID: -3048784103968094828}
   - component: {fileID: 467098756717026460}
   - component: {fileID: 4543444822446008264}
+  - component: {fileID: -2971812169833733080}
   m_Layer: 0
   m_Name: 3 Barricades
   m_TagString: Untagged
@@ -331,8 +332,21 @@ MonoBehaviour:
   Speed: 10
   Acceleration: 0
   Direction: {x: 0, y: 0, z: -1}
-  DirectionCanBeChangedBySpawner: 1
+  DirectionCanBeChangedBySpawner: 0
   MovementSpace: 0
+--- !u!114 &-2971812169833733080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6055661981515659559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89a8cfe26a3a99741ab5f196acf474a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyDistanceBehindBounds: 20
 --- !u!1 &7938607483999949584
 GameObject:
   m_ObjectHideFlags: 0

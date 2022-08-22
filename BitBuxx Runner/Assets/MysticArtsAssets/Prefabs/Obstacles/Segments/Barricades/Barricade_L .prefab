@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 5628156846364767143}
   - component: {fileID: 2148434792213637807}
   - component: {fileID: 2640867680107991547}
+  - component: {fileID: -2855247547907317970}
   m_Layer: 0
   m_Name: 'Barricade_L '
   m_TagString: Untagged
@@ -161,8 +162,21 @@ MonoBehaviour:
   Speed: 10
   Acceleration: 0
   Direction: {x: 0, y: 0, z: -1}
-  DirectionCanBeChangedBySpawner: 1
+  DirectionCanBeChangedBySpawner: 0
   MovementSpace: 0
+--- !u!114 &-2855247547907317970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5738071545441079060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89a8cfe26a3a99741ab5f196acf474a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyDistanceBehindBounds: 20
 --- !u!1 &8466811992153693352
 GameObject:
   m_ObjectHideFlags: 0

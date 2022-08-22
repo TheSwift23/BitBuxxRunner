@@ -5,8 +5,11 @@ using UnityEngine;
 
 public class PlayerMotor : MonoBehaviour
 {
+    //FIX PLAYER SLIDING TO GET UP FASTER JUST INCASE YOU FORGET !!!!!!!
     [Header("Movement")]
-    private CharacterController controller; 
+    private CharacterController controller;
+    private CapsuleCollider playerCollider;
+    private Rigidbody playerRigidbody; 
     [SerializeField] float wallRunForce = 2.5f; 
     //[SerializeField] float gravity = 12.0f;
     //private bool canSlide = false; // have to create a timer for sliding so player cannot spam slide ;) 
@@ -77,6 +80,8 @@ public class PlayerMotor : MonoBehaviour
 
     private void Start()
     {
+        playerCollider = GetComponent<CapsuleCollider>();
+        playerRigidbody = GetComponent<Rigidbody>(); 
         _lastJumpTime = Time.time;
         _rigidbodyInterface = GetComponent<RigidBodyInterface>(); 
         _numberOfJumpsLeft = NumberOfJumpsAllowed;
@@ -335,11 +340,6 @@ public class PlayerMotor : MonoBehaviour
         _isMoving = false;
     }
 
-    private bool IsSliding()
-    {
-        return anim.GetBool("Sliding");
-    }
-
     void StartWalllRunning()
     {
         anim.SetBool("WallRun", true);
@@ -369,12 +369,16 @@ public class PlayerMotor : MonoBehaviour
     public void StartGame()
     {
         isGameStarted = true;
+        playerCollider.enabled = true;
+        playerRigidbody.useGravity = true; 
         anim.SetTrigger("StartRunning"); 
     }
 
     void Crash()
     {
         anim.SetTrigger("Death");
+        playerCollider.enabled = false;
+        playerRigidbody.useGravity = false; 
         isGameStarted = false;
         GameManager.Instance.OnDeath(); 
     }

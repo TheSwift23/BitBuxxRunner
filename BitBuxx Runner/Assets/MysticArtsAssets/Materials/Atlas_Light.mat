@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Atlas_Coins
+  m_Name: Atlas_Light
   m_Shader: {fileID: 4800000, guid: ad39aab566ccacd438787d16430b776c, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4

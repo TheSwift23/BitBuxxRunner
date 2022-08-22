@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4584708653754710033}
   - component: {fileID: 2051485541}
   - component: {fileID: 2677615375596914201}
-  - component: {fileID: -335173087425495947}
   m_Layer: 0
   m_Name: Barricade
   m_TagString: Obstacle
@@ -62,23 +61,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BoundsBasedOn: 0
   LifeTime: 0
---- !u!114 &-335173087425495947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5911222432362467514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4a6617bb2a239047a2242ac9b1cc531, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 10
-  Acceleration: 0
-  Direction: {x: 0, y: 0, z: -1}
-  DirectionCanBeChangedBySpawner: 0
-  MovementSpace: 1
 --- !u!1001 &9026014209802526300
 PrefabInstance:
   m_ObjectHideFlags: 0

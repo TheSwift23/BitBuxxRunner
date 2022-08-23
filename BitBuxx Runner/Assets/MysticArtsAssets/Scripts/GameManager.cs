@@ -25,7 +25,8 @@ public class GameManager : MonoBehaviour
     private const float MAX_DISTANCE = 10000000;
 
     // UI and UI Fields 
-    public Animator gameCanvas, menuAnim, moneyAnim; 
+    public Animator gameCanvas, menuAnim, moneyAnim;
+    public static float scoreToTeleport; 
     [SerializeField] Text scoreText, coinText, modiferText, highScoreText, coinScoreText;
     [SerializeField] float score, coinScore, modifierScore, modifierScoreCap, totalCoinScore;
 
@@ -77,6 +78,7 @@ public class GameManager : MonoBehaviour
         {
             //Increase Score 
             score += (Time.deltaTime * modifierScore);
+            scoreToTeleport += (Time.deltaTime); 
             if(lastScore != (int)score)
             {
                 lastScore = (int)score; 

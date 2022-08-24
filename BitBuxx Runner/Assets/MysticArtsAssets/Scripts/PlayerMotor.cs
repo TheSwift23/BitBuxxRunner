@@ -158,7 +158,7 @@ public class PlayerMotor : MonoBehaviour
         if(MobileInputs.Instance.SwipeDown || Input.GetKeyDown(KeyCode.S) && _grounded)
         {
             StartSliding();
-            Invoke("StopSliding", 1.0f); 
+            Invoke("StopSliding", 0.65f); 
         }
 
         if (MobileInputs.Instance.SwipeDown || Input.GetKeyDown(KeyCode.S) && !_grounded)
@@ -370,7 +370,7 @@ public class PlayerMotor : MonoBehaviour
     {
         isGameStarted = true;
         playerCollider.enabled = true;
-        playerRigidbody.useGravity = true; 
+        playerRigidbody.isKinematic = false; 
         anim.SetTrigger("StartRunning"); 
     }
 
@@ -378,7 +378,7 @@ public class PlayerMotor : MonoBehaviour
     {
         anim.SetTrigger("Death");
         playerCollider.enabled = false;
-        playerRigidbody.useGravity = false; 
+        playerRigidbody.isKinematic = true; 
         isGameStarted = false;
         GameManager.Instance.OnDeath(); 
     }

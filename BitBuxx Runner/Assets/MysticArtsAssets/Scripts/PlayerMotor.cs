@@ -15,6 +15,8 @@ public class PlayerMotor : MonoBehaviour
     //private bool canSlide = false; // have to create a timer for sliding so player cannot spam slide ;) 
     private float slidingTimer = 3.0f; 
     private float verticalVelocity;
+    public static bool IsTeleporting;
+    public static bool Teleporting; 
 
     [Header("Jumping")]
     //Force fpr when player swipes down to fall faster. 
@@ -80,6 +82,8 @@ public class PlayerMotor : MonoBehaviour
 
     private void Start()
     {
+        Teleporting = false; 
+        IsTeleporting = false; 
         playerCollider = GetComponent<CapsuleCollider>();
         playerRigidbody = GetComponent<Rigidbody>(); 
         _lastJumpTime = Time.time;
@@ -385,19 +389,25 @@ public class PlayerMotor : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "WallRunLeft")
+        /*
+        if(other.CompareTag("WallRunLeft"))
         {
             wallRunningLeft = true; 
         }
 
-        if(other.tag == "WallRunRight")
+        if(other.CompareTag("WallRunRight"))
         {
             wallRunningRight = true; 
         }
 
-        if(other.tag == "Coin")
+        if(other.CompareTag("Coin"))
         {
             audioSource.PlayOneShot(moneyPickUpSfx, volume);
+        }
+        */ 
+        if(other.CompareTag("Portal"))
+        {
+            Teleporting = true; 
         }
 
         switch (other.gameObject.tag)

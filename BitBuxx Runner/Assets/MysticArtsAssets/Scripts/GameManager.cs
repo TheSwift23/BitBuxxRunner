@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
             menuAnim.SetTrigger("Hide"); 
         }
 
-        if (isGameStarted && !IsDead)
+        if (isGameStarted && !IsDead && !PlayerMotor.IsTeleporting)
         {
             //Increase Score 
             score += (Time.deltaTime * modifierScore);

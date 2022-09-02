@@ -9,7 +9,7 @@ namespace MoreMountains.InfiniteRunnerEngine
 	/// <summary>
 	/// Spawns and positions/resizes objects based on the distance traveled 
 	/// </summary>
-	public class DistanceSpawner : Spawner 
+	public class DistanceSpawner : Spawner
 	{
 		public enum GapOrigins { Spawner, LastSpawnedObject } 
 
@@ -66,7 +66,7 @@ namespace MoreMountains.InfiniteRunnerEngine
 			// if we've set our distance spawner to only spawn when the game's in progress :
 	        if (OnlySpawnWhileGameInProgress)
 	        {
-	            if ((PlayerMotor.isGameStarted != true) && (GameManager.Instance.Status != GameManager.GameStatus.Paused))
+	            if ((PlayerMotor.isGameStarted != true) && (GameManager.Instance.Status != GameManager.GameStatus.Paused) || PlayerMotor.IsTeleporting != false)
 	            {
 	                _lastSpawnedTransform = null;
 	                return ;

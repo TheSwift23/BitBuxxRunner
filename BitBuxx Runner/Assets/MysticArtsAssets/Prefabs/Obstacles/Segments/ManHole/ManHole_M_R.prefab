@@ -80,7 +80,7 @@ MonoBehaviour:
   Acceleration: 0
   Direction: {x: 0, y: 0, z: -1}
   DirectionCanBeChangedBySpawner: 0
-  MovementSpace: 1
+  MovementSpace: 0
 --- !u!114 &1814747786260582124
 MonoBehaviour:
   m_ObjectHideFlags: 0

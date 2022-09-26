@@ -98,7 +98,7 @@ public class PlayerMotor : MonoBehaviour
     private void Update()
     {
         //Save Debug For Future Bugs That Might Need To Be Fixed. 
-        //Debug.Log(speed); 
+        //Debug.Log(speedIncreaseLastTick); 
 
         if (!isGameStarted)
         {

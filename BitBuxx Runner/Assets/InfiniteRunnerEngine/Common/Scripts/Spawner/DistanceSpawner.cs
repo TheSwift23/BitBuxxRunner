@@ -66,7 +66,7 @@ namespace MoreMountains.InfiniteRunnerEngine
 			// if we've set our distance spawner to only spawn when the game's in progress :
 	        if (OnlySpawnWhileGameInProgress)
 	        {
-	            if ((PlayerMotor.isGameStarted != true) && (GameManager.Instance.Status != GameManager.GameStatus.Paused) || PlayerMotor.IsTeleporting != false)
+	            if ((!PlayerMotor.isGameStarted) && (GameManager.Instance.Status != GameManager.GameStatus.Paused) || PlayerMotor.IsTeleporting != false)
 	            {
 	                _lastSpawnedTransform = null;
 	                return ;

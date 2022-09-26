@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
     //use this to debug the game by reloading the scene
     public Scene currentScene;
 
+    public Button settingsButton; 
+
     public bool IsDead { set; get; }
     private bool isGameStarted = false;
     private PlayerMotor motor;
@@ -37,8 +39,9 @@ public class GameManager : MonoBehaviour
     {
         gameCanvas.SetTrigger("Hide");
         mainMusic.Stop(); 
-        titleMusic.Play(); 
-    }
+        titleMusic.Play();
+        isGameStarted = false;
+}
 
     private void Awake()
     {
@@ -62,6 +65,8 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         //Reset mechanic no longer needed so I deleted it. 
+
+        //Debug.Log(modifierScore); 
 
         if(MobileInputs.Instance.Tap && !isGameStarted)
         {
@@ -104,6 +109,11 @@ public class GameManager : MonoBehaviour
         coinText.text = coinScore.ToString("0");
         score += COIN_SCORE_AMOUNT; 
         scoreText.text = scoreText.text = score.ToString("0"); 
+    }
+
+    public void Settings()
+    {
+        Debug.Log("Button Pressed!"); 
     }
 
     public void UpdateModifier(float modifierAmount)

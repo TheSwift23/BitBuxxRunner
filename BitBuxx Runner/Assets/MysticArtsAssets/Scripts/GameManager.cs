@@ -113,7 +113,9 @@ public class GameManager : MonoBehaviour
 
     public void Settings()
     {
+           
         Debug.Log("Button Pressed!"); 
+        
     }
 
     public void UpdateModifier(float modifierAmount)

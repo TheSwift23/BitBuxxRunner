@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     private const float MAX_DISTANCE = 10000000;
 
     // UI and UI Fields 
-    public Animator gameCanvas, menuAnim, moneyAnim;
+    public Animator gameCanvas, menuAnim, moneyAnim, buttonsAnim;
     public static float scoreToTeleport; 
     [SerializeField] Text scoreText, coinText, modiferText, highScoreText, coinScoreText;
     [SerializeField] float score, coinScore, modifierScore, modifierScoreCap, totalCoinScore;
@@ -62,22 +62,23 @@ public class GameManager : MonoBehaviour
         motor = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMotor>(); 
     }
 
+    private void Play()
+    {
+        isGameStarted = true;
+        titleMusic.Stop();
+        mainMusic.Play();
+        motor.StartGame();
+        FindObjectOfType<CameraMotor>().IsMoving = true;
+        gameCanvas.SetTrigger("Show");
+        menuAnim.SetTrigger("Hide");
+        buttonsAnim.SetTrigger("Hide"); 
+    } 
+
     private void Update()
     {
         //Reset mechanic no longer needed so I deleted it. 
 
         //Debug.Log(modifierScore); 
-
-        if(MobileInputs.Instance.Tap && !isGameStarted)
-        {
-            isGameStarted = true;
-            titleMusic.Stop();
-            mainMusic.Play(); 
-            motor.StartGame();
-            FindObjectOfType<CameraMotor>().IsMoving = true;
-            gameCanvas.SetTrigger("Show");
-            menuAnim.SetTrigger("Hide"); 
-        }
 
         if (isGameStarted && !IsDead && !PlayerMotor.IsTeleporting)
         {
@@ -109,6 +110,14 @@ public class GameManager : MonoBehaviour
         coinText.text = coinScore.ToString("0");
         score += COIN_SCORE_AMOUNT; 
         scoreText.text = scoreText.text = score.ToString("0"); 
+    }
+
+    public void PlayGame()
+    {
+        if (!isGameStarted)
+        {
+            Play();
+        }
     }
 
     public void Settings()

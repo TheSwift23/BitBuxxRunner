@@ -19,8 +19,6 @@ public class GameManager : MonoBehaviour
     //use this to debug the game by reloading the scene
     public Scene currentScene;
 
-    public Button settingsButton; 
-
     public bool IsDead { set; get; }
     private bool isGameStarted = false;
     private PlayerMotor motor;
@@ -35,13 +33,16 @@ public class GameManager : MonoBehaviour
     //Death Menu 
     public Animator deathMenuAnim;
 
+    [SerializeField] GameObject settingsImage; 
+
     private void Start()
     {
         gameCanvas.SetTrigger("Hide");
         mainMusic.Stop(); 
         titleMusic.Play();
         isGameStarted = false;
-}
+        settingsImage.SetActive(false); 
+    }
 
     private void Awake()
     {
@@ -122,9 +123,18 @@ public class GameManager : MonoBehaviour
 
     public void Settings()
     {
-           
-        Debug.Log("Button Pressed!"); 
-        
+        settingsImage.SetActive(true);  
+        //Debug.Log("Button Pressed!");
+    }
+
+    public void ContactUs()
+    {
+        Application.OpenURL("https://linktr.ee/mysticarts"); 
+    }
+
+    public void Back()
+    {
+        settingsImage.SetActive(false); 
     }
 
     public void UpdateModifier(float modifierAmount)

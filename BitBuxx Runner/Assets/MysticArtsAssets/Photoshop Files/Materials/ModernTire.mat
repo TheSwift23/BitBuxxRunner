@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Car_Wheel_Mat
+  m_Name: ModernTire
   m_Shader: {fileID: 4800000, guid: ad39aab566ccacd438787d16430b776c, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -59,7 +59,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _BumpScale: 1
-    - _Curvature: 0.002
+    - _Curvature: 0.001
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
